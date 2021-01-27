@@ -44,7 +44,7 @@ a {
 
 a:hover {
 	text-decoration: none;
-	color: #52A3CC;
+	color: #b6cc52;
 }
 /*
 a:visited {
@@ -136,7 +136,7 @@ html>body #wrapper {
 }
 
 #menu .active a, #menu a:hover {
-	color: #3366FF;
+	color: #f1ff33;
 }
 
 /* Content */
@@ -144,11 +144,11 @@ html>body #wrapper {
 #content {
 	width: 760px;
 	background: #FFFFFF;
-  padding-top: 20px;
+	padding-top: 20px;
 	padding-bottom: 20px;
-  padding-right: 20px;
-  padding-left: 20px;
-  font-size: 12pt;
+	padding-right: 20px;
+	padding-left: 20px;
+	font-size: 12pt;
 }
 
 /* #content h2 {
@@ -205,4 +205,15 @@ html>body #wrapper {
 	text-align: center;
 	font-size: small;
   color: #FFFFFF
+}
+
+.person-container {
+    margin: 20px 20px 0 0;  
+    overflow: auto
+}
+.person-thumb {
+    float: left
+}
+.person-description {
+    margin-left: 210px
 }
