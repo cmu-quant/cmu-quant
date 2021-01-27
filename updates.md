@@ -51,6 +51,15 @@ A senior computational finance major, Dallas Foster, said:
 Read more about Market Making Game [here](https://www.cmu.edu/mcs/news-events/2020/0325_market-making-game.html).
 
 ## Events Page
+*[comment]: let's link the calendar linked w quantclub.cmu@gmail.com here*
+*[comment]: will post more updates for this spring's events. For now, we're thinking about mock interviews for sophomores exclusively, quantathon, MMG(not sure), more lectures and seminars, etc.*
+
+## Resources
+*[comment]: stress that people should sign up for our mailing list to get most info*
+
+*[comment]: we can put up firm's info session and stuff here later*
+
+*[comment]: oh also, ask Lauren if we can link her website and youtube lecture series here *
 
 
 ## People Page
