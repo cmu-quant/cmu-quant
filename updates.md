@@ -7,6 +7,8 @@ Image:
 Title:
 Maybe just "CMU Quant Club" for now? can put our logo up once we design one
 
+Also put up CMU Math Department and BSCF program details
+
 ## About page
 
 Updated summary:
