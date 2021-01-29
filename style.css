@@ -24,7 +24,7 @@ body {
 h1, h2, h3 {
 	margin: 0;
 	padding: 0;
-	color: #024668;
+	color: #880101;
 	font-family: "Helvetica", Arial, Helvetica, sans-serif;
 }
 
@@ -44,7 +44,7 @@ a {
 
 a:hover {
 	text-decoration: none;
-	color: #b6cc52;
+	color: #52bacc;
 }
 /*
 a:visited {
@@ -111,7 +111,7 @@ html>body #wrapper {
 	width: 800px;
 	height: 33px;
 	padding-top: 10px;
-        background:#6775f5;
+        background:#f57777;
 }
 
 #menu ul {
@@ -215,5 +215,5 @@ html>body #wrapper {
     float: left
 }
 .person-description {
-    margin-left: 210px
+    margin-left: 300px
 }
