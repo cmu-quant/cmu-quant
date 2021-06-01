@@ -6,45 +6,53 @@ Released for free under a Creative Commons Attribution 2.5 License
 
 /* Elements */
 * {
-	color: #202020;
+  color: #202020;
 }
 
-html, body {
-	height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	background: #707070;
-	font-family: "Helvetica", Arial, Helvetica, sans-serif;
-	font-size: 12pt;
+  margin: 0;
+  padding: 0;
+  background: #707070;
+  font-family: "Helvetica", Arial, Helvetica, sans-serif;
+  font-size: 12pt;
 }
 
-h1, h2, h3 {
-	margin: 0;
-	padding: 0;
-	color: #880101;
-	font-family: "Helvetica", Arial, Helvetica, sans-serif;
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  color: #880101;
+  font-family: "Helvetica", Arial, Helvetica, sans-serif;
 }
 
-h4, h5, h6 {
+/* h4,
+h5,
+h6 {
+} */
+
+p,
+ol,
+ul,
+dl,
+blockquote {
+  margin-top: 0;
 }
 
-p, ol, ul, dl, blockquote {
-	margin-top: 0;
-}
-
-b {
-
+/* b {
 }
 
 a {
-}
+} */
 
 a:hover {
-	text-decoration: none;
-	color: #52bacc;
+  text-decoration: none;
+  color: #52bacc;
 }
 /*
 a:visited {
@@ -56,99 +64,102 @@ a:visited {
 /* Wrapper */
 
 #wrapper {
-	width: 800px;
-	height: 100%;
-	min-height: 100%;
-	padding: 20px;
-	margin: 0 auto;
+  width: 800px;
+  height: 100%;
+  min-height: 100%;
+  padding: 20px;
+  margin: 0 auto;
 }
 
-html>body #wrapper {
-	height: auto;
+html > body #wrapper {
+  height: auto;
 }
 
 /* Header */
 
 #header {
-	width: 800px;
-	height: 90px;
+  width: 800px;
+  height: 90px;
   padding-bottom: 3px;
-	background: #333333;
+  background: #333333;
   font-size: 1em;
-	color: #D0D0D0;
+  color: #d0d0d0;
 }
 
 #header h1 {
-	float: left;
-	padding: 10px 0 0 15px;
-	font-size: 3em;
-	letter-spacing: -2px;
-  color: #FFFFFF;
+  float: left;
+  padding: 10px 0 0 15px;
+  font-size: 3em;
+  letter-spacing: -2px;
+  color: #ffffff;
 }
 
 #header h2 {
-	float: right;
-	padding: 10px 20px 0 0;
-	font-size: 1.25em;
-	letter-spacing: -1px;
+  float: right;
+  padding: 10px 20px 0 0;
+  font-size: 1.25em;
+  letter-spacing: -1px;
 }
 
-#header table, #header th, #header td {
+#header table,
+#header th,
+#header td {
   font-size: 1.05em;
-  color: #D0D0D0;
+  color: #d0d0d0;
 }
 #header b {
-  color: #F8F8F8;
+  color: #f8f8f8;
 }
 
 #header a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 /* Menu */
 
 #menu {
-	width: 800px;
-	height: 33px;
-	padding-top: 10px;
-        background:#f57777;
+  width: 800px;
+  height: 33px;
+  padding-top: 10px;
+  background: #f57777;
 }
 
 #menu ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 #menu li {
-	display: inline;
+  display: inline;
 }
 
 #menu a {
-	display: block;
-	float: left;
-	width: 120px;
-	height: 14px;
-	padding: 3px 4px 0 4px;
+  display: block;
+  float: left;
+  width: 120px;
+  height: 14px;
+  padding: 3px 4px 0 4px;
   font-size: 1.1em;
   text-align: center;
-	text-decoration: none;
+  text-decoration: none;
 }
 
-#menu .active a, #menu a:hover {
-	color: #52bacc;
+#menu .active a,
+#menu a:hover {
+  color: #52bacc;
 }
 
 /* Content */
 
 #content {
-	width: 760px;
-	background: #FFFFFF;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-right: 20px;
-	padding-left: 20px;
-	font-size: 12pt;
+  width: 760px;
+  background: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 12pt;
 }
 
 /* #content h2 {
@@ -157,8 +168,8 @@ html>body #wrapper {
   */
 
 #content h3 {
-  font-size:1.25em;
-	margin-bottom: 0.25em;
+  font-size: 1.25em;
+  margin-bottom: 0.25em;
 }
 
 #content ul {
@@ -176,44 +187,50 @@ html>body #wrapper {
 }
 
 #colOne {
-	float: right;
-	width: 500px;
-	padding: 20px 20px 0 20px;
+  float: right;
+  width: 500px;
+  padding: 20px 20px 0 20px;
 }
 
 #colTwo {
-	float: left;
-	width: 180px;
-	padding: 20px 20px 0 20px;
+  float: left;
+  width: 180px;
+  padding: 20px 20px 0 20px;
 }
 
 #colTwo ul {
-	margin-left: 0;
-	padding-left: 0;
-	list-style-position: inside;
+  margin-left: 0;
+  padding-left: 0;
+  list-style-position: inside;
 }
 
 /* Footer */
 
 #footer {
-	width: 800px;
+  width: 800px;
 }
 
 #footer p {
-	margin: 0;
-	padding: 20px 0 0 0;
-	text-align: center;
-	font-size: small;
-  color: #FFFFFF
+  margin: 0;
+  padding: 20px 0 0 0;
+  text-align: center;
+  font-size: small;
+  color: #ffffff;
 }
 
 .person-container {
-    margin: 20px 20px 0 0;  
-    overflow: auto
+  margin: 20px 20px 0 0;
+  overflow: auto;
 }
 .person-thumb {
-    float: left
+  float: left;
 }
 .person-description {
-    margin-left: 300px
+  margin-left: 300px;
+}
+
+.person-image {
+  height: 256px;
+  width: 256px;
+  object-fit: cover;
 }
