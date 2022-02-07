@@ -31,10 +31,9 @@ h3 {
   font-family: "Helvetica", Arial, Helvetica, sans-serif;
 }
 
-/* h4,
-h5,
-h6 {
-} */
+h4 {
+  margin-bottom: 0;
+}
 
 p,
 ol,
@@ -43,12 +42,6 @@ dl,
 blockquote {
   margin-top: 0;
 }
-
-/* b {
-}
-
-a {
-} */
 
 a:hover {
   text-decoration: none;
@@ -113,6 +106,10 @@ html > body #wrapper {
 
 #header a {
   text-decoration: none;
+}
+
+td {
+  vertical-align: top;
 }
 
 /* Menu */
