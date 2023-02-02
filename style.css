@@ -37,7 +37,9 @@ h4 {
 
 p,
 ol,
-ul,
+ul {
+	list-style-position: outside;
+}
 dl,
 blockquote {
   margin-top: 0;
