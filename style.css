@@ -196,7 +196,7 @@ td {
 #colTwo ul {
   margin-left: 0;
   padding-left: 0;
-  list-style-position: outside;
+  list-style-position: inside;
 }
 
 /* Footer */
