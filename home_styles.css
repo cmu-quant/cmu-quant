@@ -42,7 +42,7 @@ p {
       margin-right: 5vw;
       font-size: clamp(.5rem, max(2vw,2vh) , 1rem);
       font-weight: 300;
-      margin-bottom: 15vh;
+      margin-bottom: 20vh;
       text-align: center;
     }
     #Flagship-tabs-header{
