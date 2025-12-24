@@ -113,8 +113,9 @@ p {
     font-weight: 300;
     color: black;
     font-size: clamp(0.5rem,max(3vh,3vw),1rem);
-    justify-content: flex-end;
     display: flex;
+    justify-content: flex-end;
+    
     align-items: center;
     z-index: 2;
     height: 5vh;
