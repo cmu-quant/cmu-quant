@@ -10,7 +10,7 @@ function setup() {
   frameRate(24);
   cnv.position(0,0 * windowHeight);
   points = windowWidth;  
- numWaves = hscale*windowHeight / 8;
+ numWaves = hscale*windowHeight / 10;
  for(var i = 0; i < spikes; i++) {
   arr.push(Math.random());
 }
@@ -27,7 +27,7 @@ function draw() {
     stroke(colors[0]);
     strokeWeight(.5);
     beginShape(POINTS);
-    for (var x = -10; x <= points; x += 8) {
+    for (var x = -10; x <= points; x += 10) {
       // Big
       var freq1 = 0.8;
       var amp1 = 4; 
@@ -36,7 +36,7 @@ function draw() {
       var freq2 = 2;
       var amp2 = 2  ;//10*Math.random();
       var phase2 = t * (0.3 + l * 0.6) + l * 5;
-      var y = 8*( l + 1) + 
+      var y = 10*( l + 1) + 
       amp1 * Math.sin(Math.PI/180* (freq1 * x + phase1)) +
       amp2 * Math.cos(Math.PI/180*(freq2 * x + phase2));
       
