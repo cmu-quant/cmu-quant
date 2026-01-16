@@ -17,10 +17,6 @@ Updated summary:
 Signature events we hold include the **Quantathon**, **Market Making Game**, **Mock Interviews**, **Resume Workshop**, **lecture series**, and *seminars*, etc.
 
 To join the club/subscribe to our mailing list, please do so here: https://lists.andrew.cmu.edu/mailman/listinfo/cmu-quant 
-Alternatively, you can email Elena Chen, our VP of Public Relations, at yanbingc@andrew.cmu.edu for request to subscribe.
-
-*[Comment]: I'm thinking about including a few subsections for the events we hold in the about page. What do you think?*
-
 
 ### Quantathon
 *Quantathon* brings together students from a variety of backgrounds to tackle interesting and challenging problems in computational finance. 

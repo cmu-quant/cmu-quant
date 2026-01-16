@@ -19,5 +19,20 @@
     align-items: center;
 }
 .sponsor_grid img {
-    width: 30vw;
+    width: 25vw;
 }
+@media screen and (max-width: 400px) {
+    .sponsor_grid {
+      display: grid;
+      grid-template-columns: auto;
+      text-align: center;
+      align-items: center;
+      gap:20px;
+      
+    }
+    .sponsor_grid img {
+      width: 40vw;
+  }
+  
+    
+  }
