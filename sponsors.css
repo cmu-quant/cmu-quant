@@ -17,6 +17,7 @@
     display: grid;
     grid-template-columns: auto auto auto;
     align-items: center;
+    gap: 5vh;
 }
 .sponsor_grid img {
     width: 25vw;
