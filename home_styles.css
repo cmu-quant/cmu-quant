@@ -267,7 +267,7 @@ p {
     display: grid;
     grid-template-columns: auto;
     text-align: center;
-    
+
   }
   .board img {
     overflow: hidden;
@@ -276,4 +276,63 @@ p {
     height: 100px;
     object-fit: cover;
   }
+}
+
+/* ── Hover & interaction additions ── */
+
+/* Nav link hover */
+.clean-link {
+  transition: color 0.2s ease;
+}
+.clean-link:hover {
+  color: var(--cmured) !important;
+}
+
+/* Nav scroll shadow */
+.nav-bar {
+  transition: box-shadow 0.3s ease;
+}
+.nav-bar.scrolled {
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Tab button hover */
+.tab button {
+  transition: color 0.2s ease;
+}
+.tab button:hover {
+  color: var(--cmured);
+}
+
+/* Board member hover */
+.board > div {
+  transition: transform 0.25s ease;
+}
+.board > div:hover {
+  transform: translateY(-6px);
+}
+.board img {
+  transition: box-shadow 0.25s ease;
+}
+.board > div:hover img {
+  box-shadow: 0 8px 24px rgba(239, 58, 71, 0.2);
+}
+
+/* CTA link hover (mailing list, LinkedIn, etc.) */
+.cta-link {
+  transition: opacity 0.2s ease;
+}
+.cta-link:hover {
+  opacity: 0.7;
+}
+
+/* Scroll fade-up */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
