@@ -20,6 +20,10 @@
 
 
 
+html {
+  overflow-x: hidden;
+}
+
 body {
     background-color:  white;
     color: black;
@@ -57,7 +61,7 @@ p {
     height: 60vh;
     left: 0vw;
     right: 0vw;
-    width: 100vw;
+    width: 100%;
     /*top 30vh; */ 
     align-content: center;
     text-align:center;
@@ -119,7 +123,7 @@ p {
     align-items: center;
     z-index: 2;
     height: 5vh;
-    width: 100vw;
+    width: 100%;
     position: sticky;
     top: 0;
     background-color: white;
@@ -262,19 +266,95 @@ p {
 }
 
 
-@media screen and (max-width: 400px) {
-  .board {
-    display: grid;
-    grid-template-columns: auto;
-    text-align: center;
+/* ── Responsive breakpoints ── */
 
+/* Mobile events static layout — hidden on desktop */
+.mobile-events {
+  display: none;
+}
+.mobile-event-heading {
+  font-weight: 300;
+  font-family: OpenSans, sans-serif;
+  text-align: left;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  color: var(--cmured);
+}
+
+@media screen and (max-width: 768px) {
+  /* Disable fade-up on mobile to prevent scroll interference */
+  .fade-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  /* Swap tab interface for static layout */
+  .tab,
+  .tabcontent {
+    display: none !important;
+  }
+  #Flagship-tabs-header {
+    margin-bottom: 0;
+  }
+  .mobile-events {
+    display: block;
+  }
+
+  .board {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
   }
   .board img {
-    overflow: hidden;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .tab {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+  .tab button {
+    font-size: clamp(0.8rem, 4vw, 1rem);
+    padding: 10px;
+    width: 100%;
+  }
+
+  .pic_container {
+    display: none;
+  }
+  #_description {
+    margin-right: 5vw;
+    font-size: clamp(0.85rem, 4vw, 1rem);
+  }
+
+  #about-us {
+    font-size: clamp(0.9rem, 4vw, 1rem);
+    margin-bottom: 10vh;
+  }
+  .nav-bar {
+    font-size: clamp(0.75rem, 3.5vw, 1rem);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .board {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .board {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .board img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
     border-radius: 75%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
   }
 }
 

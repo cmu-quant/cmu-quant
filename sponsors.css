@@ -22,6 +22,18 @@
 .sponsor_grid img {
     width: 25vw;
 }
+@media screen and (max-width: 768px) {
+  .sponsor_grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  .sponsor_grid img {
+    width: 35vw;
+  }
+}
+
 @media screen and (max-width: 400px) {
     .sponsor_grid {
       display: grid;
