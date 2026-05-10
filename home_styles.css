@@ -124,12 +124,12 @@ p {
     z-index: 2;
     height: 5vh;
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
     background-color: white;
   }
   #logo {
-    position: absolute;
+    position: fixed;
     top: 5px;
     left: 10px;
     z-index: 3;
