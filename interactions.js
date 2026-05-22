@@ -27,7 +27,6 @@ if (!isMobile) {
     '.bento-card',
     '.exec-card',
     '.event-preview-card',
-    '.trek-card',
     '.event-highlight-card',
     '.pillar-card',
     '.join-section',

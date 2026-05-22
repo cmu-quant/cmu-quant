@@ -859,6 +859,7 @@ blockquote .attribution { color: var(--accent-blue); font-style:normal; }
   border-radius: 12px;
   padding: 2rem;
   transition: background 0.25s, transform 0.25s;
+  min-width: 0;
 }
 .trek-card:hover {
   background: var(--elevated);
@@ -873,6 +874,63 @@ blockquote .attribution { color: var(--accent-blue); font-style:normal; }
   display: block; margin-bottom: 0.5rem;
 }
 .trek-card p { margin:0; font-size:clamp(0.93rem,1.6vw,1.02rem); color:var(--text-muted); line-height:1.74; }
+
+/* ── Trek slider ── */
+.trek-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 1rem;
+  height: clamp(180px, 28vw, 340px);
+}
+.trek-slider__track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.trek-slider__track img {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.trek-slider__prev,
+.trek-slider__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+  z-index: 2;
+}
+.trek-slider__prev { left: 8px; }
+.trek-slider__next { right: 8px; }
+.trek-slider__prev:hover,
+.trek-slider__next:hover { background: rgba(0,0,0,0.75); }
+.trek-slider__dots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+.trek-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.trek-dot.active { background: #fff; }
 
 /* ── Trek photo slot ── */
 .trek-photo-slot {

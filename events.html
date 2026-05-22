@@ -123,20 +123,23 @@
       <div class="trek-card fade-up">
         <span class="trek-city">Chicago</span>
         <p style="margin-bottom:1.25rem;">Past trips have included Jump Trading, DRW, and Chicago Trading Company. We coordinate new visits each year.</p>
-        <div class="event-collage" data-gallery="chicago-trek">
-          <div class="event-collage__main" data-gallery="chicago-trek" data-index="0">
+        <div class="trek-slider" id="chicago-slider">
+          <div class="trek-slider__track">
             <img src="images/Chicago Trek/Chicago_Visit.jpeg" alt="Chicago Trek">
-          </div>
-          <div class="event-collage__side" data-gallery="chicago-trek" data-index="1">
             <img src="images/Chicago Trek/Jump_Chicago_Visit.jpeg" alt="Jump Trading Visit">
-          </div>
-          <div class="event-collage__side" data-gallery="chicago-trek" data-index="2">
             <img src="images/Chicago Trek/CTC_Chicago_Visit.jpeg" alt="CTC Visit">
+          </div>
+          <button class="trek-slider__prev" aria-label="Previous">&#8249;</button>
+          <button class="trek-slider__next" aria-label="Next">&#8250;</button>
+          <div class="trek-slider__dots">
+            <span class="trek-dot active"></span>
+            <span class="trek-dot"></span>
+            <span class="trek-dot"></span>
           </div>
         </div>
       </div>
 
-      <div class="trek-card fade-up">
+      <div class="trek-card fade-up" style="align-self:start;">
         <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
           <span class="trek-city" style="margin-bottom:0;">New York</span>
           <span style="font-family:Mon,sans-serif; font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent-gold); background:rgba(201,168,76,0.1); border:1px solid rgba(201,168,76,0.25); padding:0.28rem 0.75rem; border-radius:20px; white-space:nowrap;">In the Works</span>
@@ -178,6 +181,29 @@
   </div>
 
   <script src="interactions.js"></script>
+  <script>
+    // Chicago trek slider
+    (function() {
+      const slider = document.getElementById('chicago-slider');
+      if (!slider) return;
+      const track = slider.querySelector('.trek-slider__track');
+      const dots  = slider.querySelectorAll('.trek-dot');
+      let current = 0, total = dots.length, timer;
+
+      function goTo(n) {
+        current = (n + total) % total;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      }
+
+      slider.querySelector('.trek-slider__prev').addEventListener('click', () => { goTo(current - 1); restart(); });
+      slider.querySelector('.trek-slider__next').addEventListener('click', () => { goTo(current + 1); restart(); });
+      dots.forEach((d, i) => d.addEventListener('click', () => { goTo(i); restart(); }));
+
+      function restart() { clearInterval(timer); timer = setInterval(() => goTo(current + 1), 4000); }
+      restart();
+    })();
+  </script>
   <script>
     const galleries = {};
     document.querySelectorAll('[data-gallery][data-index]').forEach(el => {
