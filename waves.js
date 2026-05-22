@@ -15,7 +15,7 @@ function setup() {
   arr.push(Math.random());
 }
 colors = [
-  color(239, 58, 71)];
+  color(196, 18, 48, 55)]; // --accent-red at low opacity
 }
  var t = 0; 
 var change = 1;

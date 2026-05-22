@@ -1,47 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="home_styles.css">
-<link rel="icon" type="image/png" href="QuantClubIcon.ico">
-<title> Join </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join — CMU Quant Club</title>
+  <link rel="stylesheet" href="home_styles.css">
+  <link rel="icon" type="image/png" href="quantclubicofordarkmode.ico">
 </head>
 <body>
-  <div id = "logo">
-    <a href = "index.html">
-      <img src = "QuantClubWhite.png" alt="logo" style = "width:50px;height:auto;"> 
-      </a>
-     </div>     
-  
-     <div class="nav-bar"> <p>
-      <a href="index.html" class = "clean-link">About &ensp;</a>
-      <a href="events.html" class = "clean-link">Events &ensp;</a>
-      <a href="sponsors.html" class = "clean-link"  >Sponsors &ensp;</a>
-      <a href="join.html" class = "clean-link" style = " color: var(--cmured)">Join&ensp;&ensp;</a> 
-    </div> 
-   <h1 class="fade-up" style = "font-family: OpenSans, sans-serif;
-  font-weight: 300;
-  font-size: clamp(2.5rem, max(2vw,2vh) , 3.5rem);
-  margin-left: 5vw;
-  margin-right: 5vw;
-"> Join Us</h1>
 
-    <div class="fade-up" style = "font-size: 1rem; ">
-   <p> Our main form of communication is a mailing list. You can subscribe to it
-  <a href="https://lists.andrew.cmu.edu/mailman/listinfo/cmu-quant" class="cta-link" style = "text-decoration: none; color:#EF3A47 "  >here</a>. You can also follow us on  <a class="cta-link" style = "text-decoration:none; color: #EF3A47;" href = "https://www.linkedin.com/company/cmuquant/">LinkedIn</a>.
-<br> <br>Quant Club is committed to giving all CMU undergraduates opportunities to explore the finance industry. There is no application process to join our club; once you've joined our mailing list, you're in! Additionally, our events are open and free to all CMU undergraduates.
+  <div id="logo">
+    <a href="index.html">
+      <img src="QuantClubLogoForDarkMode.png" alt="CMU Quant Club" style="width:50px;height:auto;">
+    </a>
+  </div>
 
-<br> <br>
-Quant Club does not host general body meetings or regular workshops. Instead, we focus on high-impact, high-quality events. Our flagship events are in the spring, and throughout the year, we run smaller events as opportunities arise; we'd love to have you join us!
+  <div class="nav-bar">
+    <p>
+      <a href="index.html"    class="clean-link">Home &ensp;</a>
+      <a href="about.html"    class="clean-link">About &ensp;</a>
+      <a href="events.html"   class="clean-link">Events &ensp;</a>
+      <a href="sponsors.html" class="clean-link">Sponsors &ensp;</a>
+      <a href="join.html"     class="clean-link active">Join&ensp;&ensp;</a>
+    </p>
+  </div>
 
-</p>
-      </div>
-      <script src="interactions.js"></script>
-    
-      
+  <div id="main-filler"></div>
 
+  <h1 class="page-header fade-up">Join Us</h1>
+  <div class="page-header-rule"></div>
 
-    
+  <div class="join-note fade-up">
+    <p>
+      There is no application process to join Quant Club. Once you have subscribed to the mailing list, you&rsquo;re in.
+      All events are open and free to CMU undergraduates.
+    </p>
+    <p>
+      We do not host general body meetings or regular workshops. Instead, we focus on high-impact,
+      high-quality events — flagship competitions in the spring and smaller events throughout the year as opportunities arise.
+    </p>
+  </div>
+
+  <!-- ── Mailing List ── -->
+  <a class="join-section fade-up" href="https://lists.andrew.cmu.edu/mailman/listinfo/cmu-quant" target="_blank" rel="noopener">
+    <h2>Mailing List</h2>
+    <p>
+      Our primary channel for announcements, event invitations, and updates.
+      All members must be subscribed — this is how we communicate.
+    </p>
+    <span class="btn btn-primary">Subscribe</span>
+  </a>
+
+  <!-- ── Slack ── -->
+  <a class="join-section fade-up" href="https://forms.gle/8cQ7aaPhVeyXnqZU9" target="_blank" rel="noopener">
+    <h2>Slack Community</h2>
+    <p>
+      Our Slack is a more close-knit space for members who want deeper involvement with the club.
+      Access is by application.
+    </p>
+    <span class="btn btn-secondary">Apply</span>
+  </a>
+
+  <!-- ── LinkedIn ── -->
+  <a class="join-section fade-up" href="https://www.linkedin.com/company/cmuquant/" target="_blank" rel="noopener">
+    <h2>LinkedIn</h2>
+    <p>
+      Follow us on LinkedIn for industry news and club highlights.
+    </p>
+    <span class="btn btn-secondary">Follow</span>
+  </a>
+
+  <!-- ── Instagram ── -->
+  <a class="join-section fade-up" href="https://www.instagram.com/cmuquant/" target="_blank" rel="noopener">
+    <h2>Instagram</h2>
+    <p>
+      Follow us on Instagram for event photos and club updates.
+    </p>
+    <span class="btn btn-secondary">Follow</span>
+  </a>
+
+  <footer>
+    <p>An Organization of the Department of Mathematical Sciences,<br>
+    Mellon College of Science,
+    <a href="https://www.cmu.edu/math/undergrad/index.html">Carnegie Mellon University</a></p>
+  </footer>
+
+  <script src="interactions.js"></script>
 </body>
-
 </html>

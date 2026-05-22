@@ -1,52 +1,229 @@
-
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events — CMU Quant Club</title>
+  <link rel="stylesheet" href="home_styles.css">
+  <link rel="icon" type="image/png" href="quantclubicofordarkmode.ico">
+</head>
+<body>
 
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <div id="logo">
+    <a href="index.html">
+      <img src="QuantClubLogoForDarkMode.png" alt="CMU Quant Club" style="width:50px;height:auto;">
+    </a>
+  </div>
 
-    <link rel="stylesheet" href="home_styles.css">
-    <link rel="icon" type="image/png" href="QuantClubIcon.ico">
-    <title> Events </title>
-  </head>
+  <div class="nav-bar">
+    <p>
+      <a href="index.html"    class="clean-link">Home &ensp;</a>
+      <a href="about.html"    class="clean-link">About &ensp;</a>
+      <a href="events.html"   class="clean-link active">Events &ensp;</a>
+      <a href="sponsors.html" class="clean-link">Sponsors &ensp;</a>
+      <a href="join.html"     class="clean-link">Join&ensp;&ensp;</a>
+    </p>
+  </div>
 
-  <body>
-    <div id = "logo">
-      <a href = "index.html">
-        <img src = "QuantClubWhite.png" alt="logo" style = "width:50px;height:auto;"> 
-        </a>
-       </div>     
-    
-    
-       <div class="nav-bar"> <p>
-        <a href="index.html" class = "clean-link">About &ensp;</a>
-        <a href="events.html" class = "clean-link" style = " color: var(--cmured)">Events &ensp;</a>
-        <a href="sponsors.html" class = "clean-link"  >Sponsors &ensp;</a>
-        <a href="join.html" class = "clean-link" >Join&ensp;&ensp;</a> 
-       </p> </div> 
-      <h1 class="fade-up" style = "font-family: OpenSans, sans-serif;
-      font-weight: 300;
-      font-size: clamp(2.5rem, max(2vw,2vh) , 3.5rem);
-      margin-left: 5vw;
-      "> Events</h1>
+  <div id="main-filler"></div>
 
-      <h2 class="fade-up" style = "font-weight: 300; margin-left: 5vw;" > More About Our Flagship Events </h2>
-      <p class="fade-up">Quantathon brings together students from a variety of backgrounds to tackle interesting and challenging  problems in computational finance. Top teams present their findings to Goldman Sachs recruiters and employees, and winning teams earn thousands of dollars in cash prizes! </p>
+  <!-- ── Flagship Header ── -->
+  <div class="flagship-section-header fade-up">
+    <span class="section-sublabel">Annual Competitions</span>
+    <div class="flagship-big-title">Flagship<br>Events</div>
+  </div>
+  <div class="page-header-rule"></div>
+  
 
+  <!-- ── Market Making Game (first) ── -->
+  <div class="event-block fade-up">
+    <div class="event-block-meta">
+      <span class="event-detail-card__sponsor">Sponsored by Jane Street</span>
+      <h3>Market Making Game</h3>
+      <p>
+        A thought-provoking 8-hour event combining estimation, negotiation, and optimization.
+        Starting with contracts and play cash, your goal is to buy and sell to maximize return.
+        The exact contract value is revealed through economic questions, math puzzles, and trivia
+        each round.
+      </p>
+    </div>
+    <div class="event-collage">
+      <div class="event-collage__main" data-gallery="mmg" data-index="0">
+        <img src="images/webpformat/market-making-game.webp" alt="Market Making Game">
+      </div>
+      <div class="event-collage__side" data-gallery="mmg" data-index="1">
+        <img src="images/webpformat/qc3.webp" alt="">
+      </div>
+      <div class="event-collage__side" data-gallery="mmg" data-index="2">
+        <img src="images/webpformat/qc1.webp" alt="">
+      </div>
+    </div>
+  </div>
 
-      <blockquote class="fade-up" style = "margin-left: 7vw; margin-right: 5vw;">We love working around great minds to solve great problems... This competition is a great opportunity for students to apply their quantitative skills such as mathematics, probability, statistical analysis and so on in the field of finance. Knowledge in finance is not required, and students with all backgrounds were welcome to participate. <br> -- <span style = "color:var(--cmured)"> Sijie Wei, Co-Founder of Quant-Club </span>
-      </blockquote>
+  <blockquote class="fade-up">
+    The most challenging part is the uncertainty that comes from not knowing the exact value of
+    the contract and having to trade it anyways if you want any chance to make money. It wasn&rsquo;t
+    about whether the traders knew they were 100% right but whether they had a good feeling that
+    they were more right than others.
+    <br><br>
+    <span class="attribution">&mdash; Dallas Foster, BSCF Alumni</span>
+  </blockquote>
 
-      <p class="fade-up">The Market Making Game is a thought-provoking event combining estimation, negotiation and optimization.
+  <!-- ── Quantathon ── -->
+  <div class="event-block fade-up" style="margin-top:5vh;">
+    <div class="event-block-meta">
+      <span class="event-detail-card__sponsor">Sponsored by Goldman Sachs</span>
+      <h3>Quantathon</h3>
+      <p>
+        Quantathon brings together students from a variety of backgrounds to tackle challenging
+        problems in computational finance. Top teams present their findings to Goldman Sachs
+        recruiters and employees — and winning teams earn thousands of dollars in cash prizes.
+      </p>
+    </div>
+    <div class="event-collage">
+      <div class="event-collage__main" data-gallery="quantathon" data-index="0">
+        <img src="images/quantathon.jpg" alt="Quantathon">
+      </div>
+      <div class="event-collage__side" data-gallery="quantathon" data-index="1">
+        <img src="images/webpformat/qc4.webp" alt="">
+      </div>
+      <div class="event-collage__side" data-gallery="quantathon" data-index="2">
+        <img src="images/webpformat/qc2.webp" alt="">
+      </div>
+    </div>
+  </div>
 
-      Starting the game with contracts and some play cash, your goal  is to use the cash to buy and sell contracts to make a return.  However, there is a catch! The exact value of the contract is not given; instead, each round provides questions about the economy, mathematical puzzles and general trivia. Solving these questions reveal the price of the contracts. </p>
+  <blockquote class="fade-up">
+    We love working around great minds to solve great problems&hellip; This competition is a great
+    opportunity for students to apply their quantitative skills such as mathematics, probability,
+    statistical analysis and so on in the field of finance. Knowledge in finance is not required,
+    and students with all backgrounds were welcome to participate.
+    <br><br>
+    <span class="attribution">&mdash; Sijie Wei, Co-Founder of Quant Club</span>
+  </blockquote>
 
+  <!-- ── Rottman ── -->
+  <h2 class="section-header fade-up" style="margin-top:5vh;">Rottman</h2>
 
-      <blockquote class="fade-up" style = "margin-left: 7vw; margin-right: 5vw;">The most challenging part is the uncertainty that comes from not knowing the exact value of the contract and having to trade it anyways if you want any chance to make money. It wasn't about whether the traders knew they were 100% right but whether they had a good feeling that they were more right than others! <br> --  <span style = "color:var(--cmured)"> Dallas Foster, BSCF Alumni </span>  </blockquote>
-      <h2 class="fade-up" style = "font-weight: 300; margin-left: 5vw;"> Other Events </h2>
-      <p class="fade-up">  As opportunities arise, Quant Club partners with financial services firms including   <span style = "color:var(--cmured)">ArrowStreet, CTC, Castleton Commodities, Schonfeld, and DRW </span> to host recruiting sessions, panels, and technical talks. </p>
+  <div class="rottman-spotlight fade-up">
+    <span style="font-family:Mon,sans-serif; font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent-gold); background:rgba(201,168,76,0.1); border:1px solid rgba(201,168,76,0.25); padding:0.28rem 0.75rem; border-radius:20px; white-space:nowrap;">In Progress</span>
+  </div>
 
-      <script src="interactions.js"></script>
-          </body>
-  </html>
+  <!-- ── Industry Treks ── -->
+  <section class="treks-section">
+    <h2 class="section-header fade-up">Chicago &amp; NYC Treks</h2>
+    <p class="fade-up" style="margin-bottom:2rem;">
+      Quant Club organizes annual treks to major finance hubs for selected first- and second-year students
+      exploring quant internships. Office visits feature tours, networking, and firm-led activities that
+      offer direct exposure to firms&rsquo; culture, work, and recruiting.
+    </p>
+
+    <div class="treks-grid">
+
+      <div class="trek-card fade-up">
+        <span class="trek-city">Chicago</span>
+        <p style="margin-bottom:1.25rem;">Past trips have included Jump Trading, DRW, and Chicago Trading Company. We coordinate new visits each year.</p>
+        <div class="event-collage" data-gallery="chicago-trek">
+          <div class="event-collage__main" data-gallery="chicago-trek" data-index="0">
+            <img src="images/Chicago Trek/Chicago_Visit.jpeg" alt="Chicago Trek">
+          </div>
+          <div class="event-collage__side" data-gallery="chicago-trek" data-index="1">
+            <img src="images/Chicago Trek/Jump_Chicago_Visit.jpeg" alt="Jump Trading Visit">
+          </div>
+          <div class="event-collage__side" data-gallery="chicago-trek" data-index="2">
+            <img src="images/Chicago Trek/CTC_Chicago_Visit.jpeg" alt="CTC Visit">
+          </div>
+        </div>
+      </div>
+
+      <div class="trek-card fade-up">
+        <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
+          <span class="trek-city" style="margin-bottom:0;">New York</span>
+          <span style="font-family:Mon,sans-serif; font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent-gold); background:rgba(201,168,76,0.1); border:1px solid rgba(201,168,76,0.25); padding:0.28rem 0.75rem; border-radius:20px; white-space:nowrap;">In the Works</span>
+        </div>
+        <p>New York trek details coming soon.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Other Events ── -->
+  <h2 class="section-header fade-up">Other Events</h2>
+
+  <p class="fade-up" style="margin-bottom:1rem;">
+    As opportunities arise, Quant Club partners with financial services firms to host recruiting
+    sessions, panels, and technical talks.
+  </p>
+  <div style="margin:0 5vw 6vh;" class="fade-up">
+    <span class="firm-tag">ArrowStreet</span>
+    <span class="firm-tag">CTC</span>
+    <span class="firm-tag">Castleton Commodities</span>
+    <span class="firm-tag">Schonfeld</span>
+    <span class="firm-tag">DRW</span>
+  </div>
+
+  <footer>
+    <p>An Organization of the Department of Mathematical Sciences,<br>
+    Mellon College of Science,
+    <a href="https://www.cmu.edu/math/undergrad/index.html">Carnegie Mellon University</a></p>
+  </footer>
+
+  <!-- ── Lightbox ── -->
+  <div id="lightbox">
+    <button id="lightbox-close">&times;</button>
+    <button class="lightbox-nav" id="lightbox-prev">&#8249;</button>
+    <img id="lightbox-img" src="" alt="">
+    <button class="lightbox-nav" id="lightbox-next">&#8250;</button>
+    <div id="lightbox-counter"></div>
+  </div>
+
+  <script src="interactions.js"></script>
+  <script>
+    const galleries = {};
+    document.querySelectorAll('[data-gallery][data-index]').forEach(el => {
+      const key = el.dataset.gallery;
+      const idx = parseInt(el.dataset.index);
+      const src = el.querySelector('img').src;
+      if (!galleries[key]) galleries[key] = [];
+      galleries[key][idx] = src;
+    });
+
+    let currentGallery = [], currentIndex = 0;
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const lbCounter = document.getElementById('lightbox-counter');
+
+    function openLightbox(key, idx) {
+      currentGallery = galleries[key];
+      currentIndex = idx;
+      lbImg.src = currentGallery[currentIndex];
+      lbCounter.textContent = (currentIndex + 1) + ' / ' + currentGallery.length;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      lb.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    function navBy(dir) {
+      currentIndex = (currentIndex + dir + currentGallery.length) % currentGallery.length;
+      lbImg.src = currentGallery[currentIndex];
+      lbCounter.textContent = (currentIndex + 1) + ' / ' + currentGallery.length;
+    }
+
+    document.querySelectorAll('[data-gallery][data-index]').forEach(el => {
+      el.addEventListener('click', () => openLightbox(el.dataset.gallery, parseInt(el.dataset.index)));
+    });
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    document.getElementById('lightbox-prev').addEventListener('click', () => navBy(-1));
+    document.getElementById('lightbox-next').addEventListener('click', () => navBy(1));
+    lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('active')) return;
+      if (e.key === 'ArrowLeft') navBy(-1);
+      if (e.key === 'ArrowRight') navBy(1);
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>
