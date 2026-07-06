@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar — CMU Quant Club</title>
+  <link rel="stylesheet" href="home_styles.css">
+  <link rel="icon" type="image/png" href="quantclubicofordarkmode.ico">
+</head>
+<body>
+
+  <div id="logo">
+    <a href="index.html">
+      <img src="QuantClubLogoForDarkMode.png" alt="CMU Quant Club" style="width:50px;height:auto;">
+    </a>
+  </div>
+
+  <div class="nav-bar">
+    <p>
+      <a href="index.html"    class="clean-link">Home &ensp;</a>
+      <a href="about.html"    class="clean-link">About &ensp;</a>
+      <a href="events.html"   class="clean-link">Events &ensp;</a>
+      <a href="sponsors.html" class="clean-link">Sponsors &ensp;</a>
+      <a href="calendar.html" class="clean-link active">Calendar &ensp;</a>
+      <a href="join.html"     class="clean-link">Join&ensp;&ensp;</a>
+    </p>
+  </div>
+
+  <div id="main-filler"></div>
+
+  <!-- ── Header ── -->
+  <div class="flagship-section-header fade-up">
+    <span class="section-sublabel">What&rsquo;s Coming Up</span>
+    <div class="flagship-big-title">Calendar</div>
+  </div>
+  <div class="page-header-rule"></div>
+
+  <!-- ── Upcoming events (populated by calendar.js) ── -->
+  <div class="calendar-wrap">
+    <div id="cal-list">
+      <div class="cal-status">
+        <div class="cal-spinner"></div>
+        Loading events&hellip;
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>An Organization of the Department of Mathematical Sciences,<br>
+    Mellon College of Science,
+    <a href="https://www.cmu.edu/math/undergrad/index.html">Carnegie Mellon University</a></p>
+  </footer>
+
+  <script src="interactions.js"></script>
+  <script src="calendar.js"></script>
+</body>
+</html>
