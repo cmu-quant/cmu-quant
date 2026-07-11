@@ -21,6 +21,23 @@ window.addEventListener('scroll', () => {
   if (nav) nav.classList.toggle('scrolled', window.scrollY > 20);
 }, { passive: true });
 
+// Mobile nav dropdown toggle
+document.querySelectorAll('.nav-toggle').forEach(btn => {
+  const bar = btn.closest('.nav-bar');
+  if (!bar) return;
+  btn.addEventListener('click', () => {
+    const open = bar.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  // Close the menu when tapping outside it
+  document.addEventListener('click', e => {
+    if (bar.classList.contains('open') && !bar.contains(e.target)) {
+      bar.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+
 // 3D tilt on hover — skip on mobile
 if (!isMobile) {
   const TILT_SELECTORS = [

@@ -70,7 +70,8 @@ p {
   align-items: center;
   z-index: 20;
   height: 5vh;
-  min-height: 48px;
+  min-height: 58px;
+  padding-left: 64px; /* reserve space for the fixed logo so nav items never slide under it */
   position: fixed;
   top: 0;
   left: 0;
@@ -78,7 +79,6 @@ p {
   background: rgba(0, 0, 0, 0.78);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(237,230,218,0.09);
   transition: box-shadow 0.3s ease, background 0.3s ease;
 }
 .nav-bar p { margin: 0; padding-right: 1.5rem; line-height: 1; }
@@ -86,7 +86,7 @@ p {
   box-shadow: 0 2px 24px rgba(0,0,0,0.45);
   background: rgba(0, 0, 0, 0.92);
 }
-#logo { position: fixed; top: 0; left: 14px; z-index: 21; height: 5vh; min-height: 48px; display: flex; align-items: center; }
+#logo { position: fixed; top: 0; left: 14px; z-index: 21; height: 5vh; min-height: 58px; display: flex; align-items: flex-start; padding-top: 8px; }
 #logo img { height: clamp(26px, 3vh, 34px); width: auto; }
 .clean-link {
   text-decoration: none;
@@ -96,8 +96,39 @@ p {
 .clean-link:hover  { color: var(--accent-blue) !important; }
 .clean-link.active { color: var(--accent-blue) !important; }
 
+/* Hamburger toggle — hidden on desktop, shown on mobile */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  margin-right: 0.5rem;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 0 auto;
+  border-radius: 2px;
+  background: var(--text-primary);
+  transition: transform 0.28s ease, opacity 0.2s ease;
+}
+.nav-bar.open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-bar.open .nav-toggle span:nth-child(2) { opacity: 0; }
+.nav-bar.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav-toggle:focus-visible { outline: 2px solid var(--accent-blue); outline-offset: 2px; border-radius: 6px; }
+@media (prefers-reduced-motion: reduce) {
+  .nav-toggle span { transition: none; }
+}
+
 /* ── Hero ── */
-#main-filler { height: 5vh; min-height: 48px; }
+#main-filler { height: 5vh; min-height: 58px; }
 #hero {
   position: relative;
   z-index: 2;
@@ -1003,6 +1034,7 @@ canvas { z-index: 1 !important; pointer-events: none; }
   transition: transform 0.5s ease;
 }
 .winners__photo:hover img { transform: scale(1.04); }
+.winners__photo[data-gallery="quantathon-win"] img { object-position: center 32%; }
 .winners__photo figcaption {
   font-family: Mon, sans-serif;
   font-size: 0.6rem;
@@ -1456,11 +1488,45 @@ footer a:hover { color:var(--text-primary); }
   .event-mosaic__secondary { grid-template-rows:none; grid-template-columns:1fr 1fr; height:140px; }
   .platinum-grid { grid-template-columns:1fr; }
   .gold-grid     { grid-template-columns:1fr; }
-  .silver-grid   { grid-template-columns:1fr 1fr; }
+  .silver-grid   { grid-template-columns:1fr; }
+  /* Uniform sponsor boxes across tiers when stacked on mobile */
+  .sponsor-card,
+  .silver-grid .sponsor-card { aspect-ratio:16/7; padding:1.75rem 1.5rem; }
+  .silver-grid .sponsor-card img { max-height:clamp(52px,7vw,80px); max-width:clamp(160px,24vw,280px); }
   .flagship-card, .rottman-spotlight { padding:1.5rem; }
   .join-section  { padding:1.75rem 1.25rem; }
   .home-join     { padding:2.5rem 1.5rem; }
-  .nav-bar { font-size:clamp(0.58rem,2.8vw,0.82rem); }
+  /* Mobile nav: logo + hamburger on the bar, links drop down in a stacked panel */
+  #logo { padding-top:6px; }
+  .nav-toggle { display:flex; }
+  .nav-bar { justify-content:flex-end; padding-left:0; }
+  .nav-bar p {
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    margin:0;
+    padding:0;
+    flex-direction:column;
+    align-items:stretch;
+    background:rgba(0,0,0,0.94);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(237,230,218,0.09);
+    box-shadow:0 14px 32px rgba(0,0,0,0.5);
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    pointer-events:none;
+    transition:max-height 0.32s ease, opacity 0.25s ease;
+  }
+  .nav-bar.open p { max-height:80vh; opacity:1; pointer-events:auto; }
+  .nav-bar p a.clean-link {
+    display:block;
+    padding:0.95rem 1.5rem;
+    font-size:0.95rem;
+    border-top:1px solid rgba(237,230,218,0.06);
+  }
   .pillars-grid { grid-template-columns:1fr 1fr; }
 }
 @media screen and (max-width: 480px) {
