@@ -1338,8 +1338,8 @@ blockquote .attribution { color: var(--accent-blue); font-style:normal; }
 .silver-grid .sponsor-card { aspect-ratio: 4/3; padding: 1.5rem 1rem; }
 .silver-grid .sponsor-card img { max-height: clamp(40px, 5vw, 60px); }
 
-/* Citadel is a long, thin wordmark — size it to the card width so it fills the box */
-.sponsor-card--citadel img { width: 84%; max-width: 640px; height: auto; max-height: 108px; }
+/* Citadel combined lockup (emblem + wordmarks) — size by height to balance the tier */
+.sponsor-card--citadel img { width: auto; height: auto; max-width: 92%; max-height: clamp(70px, 9vw, 104px); }
 
 /* Placeholder blurb (hidden by default — uncomment to show) */
 .sponsor-card__blurb { display: none; }
