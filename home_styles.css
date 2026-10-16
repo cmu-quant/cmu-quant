@@ -1240,6 +1240,7 @@ blockquote .attribution { color: var(--accent-blue); font-style:normal; }
 .tier-section.tier-platinum .tier-line  { background: rgba(122,149,184,0.4); }
 .tier-section.tier-gold     .tier-line  { background: rgba(201,168,76,0.35); }
 .tier-section.tier-silver   .tier-line  { background: rgba(143,163,181,0.3); }
+.tier-section.tier-partners .tier-line  { background: rgba(143,163,181,0.18); }
 
 .tier-label {
   font-family: var(--font-display);
@@ -1260,10 +1261,16 @@ blockquote .attribution { color: var(--accent-blue); font-style:normal; }
   font-size: clamp(1.3rem, 3vw, 2.2rem);
   color: #8FA3B5;
 }
+.tier-section.tier-partners .tier-label {
+  font-size: clamp(1.05rem, 2.2vw, 1.6rem);
+  color: var(--text-muted);
+}
 
 .platinum-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(280px,40vw),1fr)); gap:1.75rem; margin: 0 5vw 3.5rem; }
 .gold-grid     { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(260px,38vw),1fr)); gap:1.5rem; margin: 0 5vw 3rem; }
 .silver-grid   { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(200px,44vw),1fr)); gap:1.25rem; margin: 0 5vw 3rem; }
+/* Partners: wide wordmarks, fixed-width cards centered under the heading */
+.partners-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(0,300px)); justify-content:center; gap:1.25rem; margin: 0 5vw 3rem; }
 
 /* ── Sponsor CTA ── */
 .sponsor-cta {
