@@ -1,0 +1,12 @@
+{
+  "file": "quant-shot-3-glow-intro.mp4",
+  "source": "quant-original-shot-3.mp4",
+  "duration_seconds": 4,
+  "frames_per_second": 24,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "intro": "One second: hold the existing glowing-dot poster for 5 frames, then smoothly blend into the first frame of shot 3.",
+  "original_shot": "All 72 frames retained after the intro, including the fade to black."
+}

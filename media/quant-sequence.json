@@ -1,0 +1,34 @@
+{
+  "file": "quant-sequence.mp4",
+  "duration_seconds": 10,
+  "frames_per_second": 24,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "model": "Higgsfield / Kling 3.0 Pro",
+  "audio": false,
+  "clips": [
+    {
+      "name": "Burst and jitter",
+      "duration_seconds": 3,
+      "job_id": "2603c245-5e9e-49e5-99ed-65570d83567c"
+    },
+    {
+      "name": "Paths and chase",
+      "duration_seconds": 4,
+      "job_id": "bfb6e4f6-8093-418e-8496-5182988ce1a3"
+    },
+    {
+      "name": "Reveal and collapse",
+      "duration_seconds": 3,
+      "job_id": "bdaa5172-e65e-4621-bea7-872458c304a9"
+    }
+  ],
+  "notes": "Homepage hero in index.html. Decorative imagery, not market data. The former cinematic.html preview redirects to the homepage.",
+  "postprocessing": {
+    "opening": "Warm ball of light, held for 0.2 seconds and blended into the particle burst by 0.85 seconds.",
+    "ending": "Fade to pure black from 8.85 to 9.8 seconds; black through the final frame.",
+    "revision": 2
+  }
+}

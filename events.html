@@ -4,37 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Events — CMU Quant Club</title>
-  <link rel="stylesheet" href="home_styles.css">
+  <link rel="stylesheet" href="home_styles.css?v=svg-arrows">
   <link rel="icon" type="image/png" href="quantclubicofordarkmode.ico">
 </head>
-<body>
+<body class="page-events">
 
-  <div id="logo">
-    <a href="index.html">
-      <img src="QuantClubLogoForDarkMode.png" alt="CMU Quant Club" style="width:50px;height:auto;">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="CMU Quant Club home">
+      <img src="QuantClubLogoForDarkMode.png" width="44" height="44" alt="">
+      <span>CMU <strong>Quant Club</strong><small>Carnegie Mellon University</small></span>
     </a>
-  </div>
+    <nav class="nav-bar" aria-label="Main navigation">
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html" class="active" aria-current="page">Events</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="join.html" class="nav-join">Join the Club <svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
 
-  <div class="nav-bar">
-    <p>
-      <a href="index.html"    class="clean-link">Home &ensp;</a>
-      <a href="about.html"    class="clean-link">About &ensp;</a>
-      <a href="events.html"   class="clean-link active">Events &ensp;</a>
-      <a href="sponsors.html" class="clean-link">Sponsors &ensp;</a>
-      <a href="calendar.html" class="clean-link">Calendar &ensp;</a>
-      <a href="join.html"     class="clean-link">Join&ensp;&ensp;</a>
-    </p>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-
-  <div id="main-filler"></div>
 
   <!-- ── Flagship Header ── -->
   <div class="flagship-section-header fade-up">
     <span class="section-sublabel">Annual Competitions</span>
-    <div class="flagship-big-title">Flagship<br>Events</div>
+    <h1 class="flagship-big-title">Flagship Events</h1>
   </div>
   <div class="page-header-rule"></div>
   
@@ -52,14 +51,14 @@
       </p>
     </div>
     <div class="event-collage">
-      <div class="event-collage__main" data-gallery="mmg" data-index="0">
-        <img src="images/webpformat/market-making-game.webp" alt="Market Making Game">
+      <div class="event-collage__main" data-gallery="mmg" data-index="0" role="button" tabindex="0" aria-label="Open Market Making Game photo 1">
+        <img loading="lazy" src="images/webpformat/market-making-game.webp" alt="Market Making Game">
       </div>
-      <div class="event-collage__side" data-gallery="mmg" data-index="1">
-        <img src="images/webpformat/qc3.webp" alt="">
+      <div class="event-collage__side" data-gallery="mmg" data-index="1" role="button" tabindex="0" aria-label="Open Market Making Game photo 2">
+        <img loading="lazy" src="images/webpformat/qc3.webp" alt="">
       </div>
-      <div class="event-collage__side" data-gallery="mmg" data-index="2">
-        <img src="images/webpformat/qc1.webp" alt="">
+      <div class="event-collage__side" data-gallery="mmg" data-index="2" role="button" tabindex="0" aria-label="Open Market Making Game photo 3">
+        <img loading="lazy" src="images/webpformat/qc1.webp" alt="">
       </div>
     </div>
 
@@ -70,8 +69,8 @@
       </summary>
       <div class="winners__body">
         <div class="winners__year">
-          <figure class="winners__photo" data-gallery="mmg-win" data-index="0">
-            <img src="images/mmg-2026-winners.webp" alt="4sigma, 2026 Market Making Game champions, holding the Jane Street prize check">
+          <figure class="winners__photo" data-gallery="mmg-win" data-index="0" role="button" tabindex="0" aria-label="Open Market Making Game photo 1">
+            <img loading="lazy" src="images/mmg-2026-winners.webp" alt="4sigma, 2026 Market Making Game champions, holding the Jane Street prize check">
           </figure>
           <div class="winners__year-head">
             <span class="winners__yr">2026</span>
@@ -83,14 +82,6 @@
                 <div class="podium__team">4sigma <span class="podium__prize">$2,000</span></div>
                 <div class="podium__names">Erik Pernebo <span class="sep">&middot;</span> Max Gao <span class="sep">&middot;</span> Julius Wentrup <span class="sep">&middot;</span> Neil Porwal <span class="sep">&middot;</span> Charlie Lin <span class="sep">&middot;</span> Ahaan Thakur</div>
               </div>
-            </li>
-            <li class="podium__row podium--2">
-              <span class="podium__rank">2nd</span>
-              <div class="podium__detail"><div class="podium__names podium__names--empty">&mdash;</div></div>
-            </li>
-            <li class="podium__row podium--3">
-              <span class="podium__rank">3rd</span>
-              <div class="podium__detail"><div class="podium__names podium__names--empty">&mdash;</div></div>
             </li>
           </ol>
         </div>
@@ -120,14 +111,14 @@
       </p>
     </div>
     <div class="event-collage">
-      <div class="event-collage__main" data-gallery="quantathon" data-index="0">
-        <img src="images/quantathon.jpg" alt="Quantathon">
+      <div class="event-collage__main" data-gallery="quantathon" data-index="0" role="button" tabindex="0" aria-label="Open Quantathon photo 1">
+        <img loading="lazy" src="images/quantathon.jpg" alt="Quantathon">
       </div>
-      <div class="event-collage__side" data-gallery="quantathon" data-index="1">
-        <img src="images/webpformat/qc4.webp" alt="">
+      <div class="event-collage__side" data-gallery="quantathon" data-index="1" role="button" tabindex="0" aria-label="Open Quantathon photo 2">
+        <img loading="lazy" src="images/webpformat/qc4.webp" alt="">
       </div>
-      <div class="event-collage__side" data-gallery="quantathon" data-index="2">
-        <img src="images/webpformat/qc2.webp" alt="">
+      <div class="event-collage__side" data-gallery="quantathon" data-index="2" role="button" tabindex="0" aria-label="Open Quantathon photo 3">
+        <img loading="lazy" src="images/webpformat/qc2.webp" alt="">
       </div>
     </div>
 
@@ -139,8 +130,8 @@
       <div class="winners__body">
 
         <div class="winners__year">
-          <figure class="winners__photo" data-gallery="quantathon-win" data-index="0">
-            <img src="images/quantathon-2026-winners.webp" alt="Team Exec, Quantathon 2026 runners-up, holding their prize check">
+          <figure class="winners__photo" data-gallery="quantathon-win" data-index="0" role="button" tabindex="0" aria-label="Open Quantathon photo 1">
+            <img loading="lazy" src="images/quantathon-2026-winners.webp" alt="Team Exec, Quantathon 2026 runners-up, holding their prize check">
           </figure>
           <div class="winners__year-head">
             <span class="winners__yr">2026</span>
@@ -226,21 +217,21 @@
       <div class="trek-card fade-up">
         <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
           <span class="trek-city" style="margin-bottom:0;">Chicago</span>
-          <span style="font-family:Mon,sans-serif; font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent-gold); background:rgba(201,168,76,0.1); border:1px solid rgba(201,168,76,0.25); padding:0.28rem 0.75rem; border-radius:20px; white-space:nowrap;">2027 In Progress</span>
+          <span style="font-family:Mon,sans-serif; font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent-gold); background:rgba(201,168,76,0.1); border:1px solid rgba(201,168,76,0.25); padding:0.28rem 0.75rem; border-radius:20px; white-space:nowrap;">2027 in Progress</span>
         </div>
         <p style="margin-bottom:1.25rem;">In 2026 we visited Jump Trading, DRW, and Chicago Trading Company.</p>
         <div class="trek-slider" id="chicago-slider">
           <div class="trek-slider__track">
-            <img src="images/Chicago Trek/Chicago_Visit.jpeg" alt="Chicago Trek">
-            <img src="images/Chicago Trek/Jump_Chicago_Visit.jpeg" alt="Jump Trading Visit">
-            <img src="images/Chicago Trek/CTC_Chicago_Visit.jpeg" alt="CTC Visit">
+            <img loading="lazy" src="images/Chicago Trek/Chicago_Visit.jpeg" alt="Chicago Trek">
+            <img loading="lazy" src="images/Chicago Trek/Jump_Chicago_Visit.jpeg" alt="Jump Trading Visit">
+            <img loading="lazy" src="images/Chicago Trek/CTC_Chicago_Visit.jpeg" alt="CTC Visit">
           </div>
           <button class="trek-slider__prev" aria-label="Previous">&#8249;</button>
           <button class="trek-slider__next" aria-label="Next">&#8250;</button>
           <div class="trek-slider__dots">
-            <span class="trek-dot active"></span>
-            <span class="trek-dot"></span>
-            <span class="trek-dot"></span>
+            <button type="button" class="trek-dot active"></button>
+            <button type="button" class="trek-dot"></button>
+            <button type="button" class="trek-dot"></button>
           </div>
         </div>
       </div>
@@ -248,7 +239,7 @@
       <div class="trek-card fade-up" style="align-self:start;">
         <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
           <span class="trek-city" style="margin-bottom:0;">New York</span>
-          <span style="font-family:Mon,sans-serif; font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent-gold); background:rgba(201,168,76,0.1); border:1px solid rgba(201,168,76,0.25); padding:0.28rem 0.75rem; border-radius:20px; white-space:nowrap;">In the Works</span>
+          <span style="font-family:Mon,sans-serif; font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent-gold); background:rgba(201,168,76,0.1); border:1px solid rgba(201,168,76,0.25); padding:0.28rem 0.75rem; border-radius:20px; white-space:nowrap;">2027 in Progress</span>
         </div>
         <p>New York trek details coming soon.</p>
       </div>
@@ -271,91 +262,26 @@
     <span class="firm-tag">DRW</span>
   </div>
 
+  </main>
   <footer>
+    <div class="footer-brand"><a href="index.html">CMU Quant Club<span aria-hidden="true">↗</span></a><span>Mathematics. Markets. Community.</span><span class="footer-copyright">&copy; 2026 CMU Quant Club</span></div>
     <p>An Organization of the Department of Mathematical Sciences,<br>
     Mellon College of Science,
     <a href="https://www.cmu.edu/math/undergrad/index.html">Carnegie Mellon University</a></p>
   </footer>
 
   <!-- ── Lightbox ── -->
-  <div id="lightbox">
-    <button id="lightbox-close">&times;</button>
-    <button class="lightbox-nav" id="lightbox-prev">&#8249;</button>
-    <img id="lightbox-img" src="" alt="">
-    <button class="lightbox-nav" id="lightbox-next">&#8250;</button>
-    <div id="lightbox-counter"></div>
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Event photo gallery" aria-hidden="true">
+    <button id="lightbox-close" aria-label="Close gallery">&times;</button>
+    <button class="lightbox-nav" id="lightbox-prev" aria-label="Previous photo">&#8249;</button>
+    <img loading="lazy" id="lightbox-img" alt="">
+    <button class="lightbox-nav" id="lightbox-next" aria-label="Next photo">&#8250;</button>
+    <div id="lightbox-counter" aria-live="polite"></div>
   </div>
 
   <script src="interactions.js"></script>
-  <script>
-    // Chicago trek slider
-    (function() {
-      const slider = document.getElementById('chicago-slider');
-      if (!slider) return;
-      const track = slider.querySelector('.trek-slider__track');
-      const dots  = slider.querySelectorAll('.trek-dot');
-      let current = 0, total = dots.length, timer;
+  <script src="events.js"></script>
 
-      function goTo(n) {
-        current = (n + total) % total;
-        track.style.transform = `translateX(-${current * 100}%)`;
-        dots.forEach((d, i) => d.classList.toggle('active', i === current));
-      }
 
-      slider.querySelector('.trek-slider__prev').addEventListener('click', () => { goTo(current - 1); restart(); });
-      slider.querySelector('.trek-slider__next').addEventListener('click', () => { goTo(current + 1); restart(); });
-      dots.forEach((d, i) => d.addEventListener('click', () => { goTo(i); restart(); }));
-
-      function restart() { clearInterval(timer); timer = setInterval(() => goTo(current + 1), 4000); }
-      restart();
-    })();
-  </script>
-  <script>
-    const galleries = {};
-    document.querySelectorAll('[data-gallery][data-index]').forEach(el => {
-      const key = el.dataset.gallery;
-      const idx = parseInt(el.dataset.index);
-      const src = el.querySelector('img').src;
-      if (!galleries[key]) galleries[key] = [];
-      galleries[key][idx] = src;
-    });
-
-    let currentGallery = [], currentIndex = 0;
-    const lb = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lightbox-img');
-    const lbCounter = document.getElementById('lightbox-counter');
-
-    function openLightbox(key, idx) {
-      currentGallery = galleries[key];
-      currentIndex = idx;
-      lbImg.src = currentGallery[currentIndex];
-      lbCounter.textContent = (currentIndex + 1) + ' / ' + currentGallery.length;
-      lb.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox() {
-      lb.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-    function navBy(dir) {
-      currentIndex = (currentIndex + dir + currentGallery.length) % currentGallery.length;
-      lbImg.src = currentGallery[currentIndex];
-      lbCounter.textContent = (currentIndex + 1) + ' / ' + currentGallery.length;
-    }
-
-    document.querySelectorAll('[data-gallery][data-index]').forEach(el => {
-      el.addEventListener('click', () => openLightbox(el.dataset.gallery, parseInt(el.dataset.index)));
-    });
-    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
-    document.getElementById('lightbox-prev').addEventListener('click', () => navBy(-1));
-    document.getElementById('lightbox-next').addEventListener('click', () => navBy(1));
-    lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
-    document.addEventListener('keydown', e => {
-      if (!lb.classList.contains('active')) return;
-      if (e.key === 'ArrowLeft') navBy(-1);
-      if (e.key === 'ArrowRight') navBy(1);
-      if (e.key === 'Escape') closeLightbox();
-    });
-  </script>
 </body>
 </html>

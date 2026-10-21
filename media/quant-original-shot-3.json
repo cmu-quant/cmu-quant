@@ -1,0 +1,15 @@
+{
+  "file": "quant-original-shot-3.mp4",
+  "source": "quant-sequence.mp4",
+  "source_start_seconds": 7,
+  "source_end_seconds": 10,
+  "duration_seconds": 3,
+  "frames_per_second": 24,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "shot": "Original shot 3 \u2014 Reveal and collapse",
+  "job_id": "bdaa5172-e65e-4621-bea7-872458c304a9",
+  "notes": "Original shot 3 trimmed from the existing film. Existing fade to black preserved. Homepage uses this clip."
+}

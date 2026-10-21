@@ -4,34 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — CMU Quant Club</title>
-  <link rel="stylesheet" href="home_styles.css">
+  <link rel="stylesheet" href="home_styles.css?v=svg-arrows">
   <link rel="icon" type="image/png" href="quantclubicofordarkmode.ico">
 </head>
-<body>
+<body class="page-about">
 
-  <div id="logo">
-    <a href="index.html">
-      <img src="QuantClubLogoForDarkMode.png" alt="CMU Quant Club" style="width:50px;height:auto;">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="CMU Quant Club home">
+      <img src="QuantClubLogoForDarkMode.png" width="44" height="44" alt="">
+      <span>CMU <strong>Quant Club</strong><small>Carnegie Mellon University</small></span>
     </a>
-  </div>
+    <nav class="nav-bar" aria-label="Main navigation">
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active" aria-current="page">About</a>
+        <a href="events.html">Events</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="join.html" class="nav-join">Join the Club <svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
 
-  <div class="nav-bar">
-    <p>
-      <a href="index.html"    class="clean-link">Home &ensp;</a>
-      <a href="about.html"    class="clean-link active">About &ensp;</a>
-      <a href="events.html"   class="clean-link">Events &ensp;</a>
-      <a href="sponsors.html" class="clean-link">Sponsors &ensp;</a>
-      <a href="calendar.html" class="clean-link">Calendar &ensp;</a>
-      <a href="join.html"     class="clean-link">Join&ensp;&ensp;</a>
-    </p>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
 
-  <div id="main-filler"></div>
-
-  <h1 class="page-header fade-up">About</h1>
+  <div class="flagship-section-header"><span class="section-sublabel">Our Community</span><h1 class="page-header">About</h1></div>
   <div class="page-header-rule"></div>
 
   <!-- ── Two-col intro ── -->
@@ -40,7 +39,7 @@
 
       <div class="about-intro__display">
         <span class="section-sublabel">Established at Carnegie Mellon</span>
-        <h2 class="about-display-heading">Quant Finance<br>for CMU<br>Students</h2>
+        <h2 class="about-display-heading">Quant Finance <br>for CMU <br>Students</h2>
       </div>
 
       <div class="about-intro__body">
@@ -91,7 +90,7 @@
   </section>
 
   <!-- ── Flagship Event Highlights ── -->
-  <h2 class="section-header fade-up" style="color:var(--text-muted);font-size:clamp(0.7rem,1.2vw,0.85rem);letter-spacing:0.15em;text-transform:uppercase;font-weight:400;margin-bottom:1rem;">Flagship Events</h2>
+  <h2 class="section-header fade-up">Flagship Events</h2>
 
   <div class="event-highlights">
 
@@ -117,7 +116,7 @@
     <div class="exec-grid exec-grid--about fade-up">
 
       <a class="exec-card" href="https://www.linkedin.com/in/rishi-prabhu/" target="_blank" rel="noopener">
-        <img class="exec-card__photo" src="board_2026-27/riship.png" alt="Rishi Prabhu">
+        <img loading="lazy" class="exec-card__photo" src="board_2026-27/riship.png" alt="Rishi Prabhu">
         <div class="exec-card__name">Rishi Prabhu</div>
         <div class="exec-card__role">President</div>
         <div class="exec-card__meta">Computational Finance &amp; CS &amp; ML Minor &middot; Junior</div>
@@ -125,7 +124,7 @@
       </a>
 
       <a class="exec-card" href="https://www.linkedin.com/in/arjun-niraj-patel/" target="_blank" rel="noopener">
-        <img class="exec-card__photo" src="board_2026-27/arjunp.jpg" alt="Arjun Patel">
+        <img loading="lazy" class="exec-card__photo" src="board_2026-27/arjunp.jpg" alt="Arjun Patel">
         <div class="exec-card__name">Arjun Patel</div>
         <div class="exec-card__role">VP Finance</div>
         <div class="exec-card__meta">Computational Finance &amp; CS Minor &middot; Junior</div>
@@ -133,7 +132,7 @@
       </a>
 
       <a class="exec-card" href="https://www.linkedin.com/in/erikpernebo/" target="_blank" rel="noopener">
-        <img class="exec-card__photo" src="board_2026-27/erikp.jpg" alt="Erik Pernebo">
+        <img loading="lazy" class="exec-card__photo" src="board_2026-27/erikp.jpg" alt="Erik Pernebo">
         <div class="exec-card__name">Erik Pernebo</div>
         <div class="exec-card__role">VP Technology</div>
         <div class="exec-card__meta">Computer Science (Algorithms &amp; Complexity) &middot; Junior</div>
@@ -141,7 +140,7 @@
       </a>
 
       <a class="exec-card" href="https://www.linkedin.com/in/jacob-braginsky/" target="_blank" rel="noopener">
-        <img class="exec-card__photo" src="board_2026-27/jacobb.png" alt="Jacob Braginsky">
+        <img loading="lazy" class="exec-card__photo" src="board_2026-27/jacobb.png" alt="Jacob Braginsky">
         <div class="exec-card__name">Jacob Braginsky</div>
         <div class="exec-card__role">VP Public Relations</div>
         <div class="exec-card__meta">Mathematical Sciences &amp; CS Minor &middot; Junior</div>
@@ -149,7 +148,7 @@
       </a>
 
       <a class="exec-card" href="https://www.linkedin.com/in/joshua-q-wang/" target="_blank" rel="noopener">
-        <img class="exec-card__photo" src="board_2026-27/joshuaw.png" alt="Joshua Wang">
+        <img loading="lazy" class="exec-card__photo" src="board_2026-27/joshuaw.png" alt="Joshua Wang">
         <div class="exec-card__name">Joshua Wang</div>
         <div class="exec-card__role">VP Logistics</div>
         <div class="exec-card__meta">Mathematics &amp; CS &middot; Junior</div>
@@ -157,7 +156,7 @@
       </a>
 
       <a class="exec-card" href="https://www.linkedin.com/in/kyle-dickinson-cmu/" target="_blank" rel="noopener">
-        <img class="exec-card__photo" src="board_2026-27/kyled.JPG" alt="Kyle Dickinson">
+        <img loading="lazy" class="exec-card__photo" src="board_2026-27/kyled.JPG" alt="Kyle Dickinson">
         <div class="exec-card__name">Kyle Dickinson</div>
         <div class="exec-card__role">VP Marketing</div>
         <div class="exec-card__meta">Mathematics &middot; Sophomore</div>
@@ -165,7 +164,7 @@
       </a>
 
       <a class="exec-card" href="https://www.linkedin.com/in/michaelfryburg/" target="_blank" rel="noopener">
-        <img class="exec-card__photo" src="board_2026-27/michaelf.png" alt="Michael Fryburg">
+        <img loading="lazy" class="exec-card__photo" src="board_2026-27/michaelf.png" alt="Michael Fryburg">
         <div class="exec-card__name">Michael Fryburg</div>
         <div class="exec-card__role">Secretary</div>
         <div class="exec-card__meta">Artificial Intelligence &amp; Computational Finance Minor &middot; Junior</div>
@@ -175,7 +174,9 @@
     </div>
   </div>
 
+  </main>
   <footer>
+    <div class="footer-brand"><a href="index.html">CMU Quant Club<span aria-hidden="true">↗</span></a><span>Mathematics. Markets. Community.</span><span class="footer-copyright">&copy; 2026 CMU Quant Club</span></div>
     <p>An Organization of the Department of Mathematical Sciences,<br>
     Mellon College of Science,
     <a href="https://www.cmu.edu/math/undergrad/index.html">Carnegie Mellon University</a></p>

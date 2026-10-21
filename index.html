@@ -4,66 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CMU Quant Club</title>
-  <link rel="stylesheet" href="home_styles.css">
+  <link rel="stylesheet" href="home_styles.css?v=svg-arrows">
+  <link rel="stylesheet" href="cinematic.css?v=mobile-no-media">
   <link rel="icon" type="image/png" href="quantclubicofordarkmode.ico">
 </head>
-<body>
+<body class="page-index hero-cinematic">
 
-  <div id="logo">
-    <a href="index.html">
-      <img src="QuantClubLogoForDarkMode.png" alt="CMU Quant Club" style="width:50px;height:auto;">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="CMU Quant Club home">
+      <img src="QuantClubLogoForDarkMode.png" width="44" height="44" alt="">
+      <span>CMU <strong>Quant Club</strong><small>Carnegie Mellon University</small></span>
     </a>
-  </div>
+    <nav class="nav-bar" aria-label="Main navigation">
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="join.html" class="nav-join">Join the Club <svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
 
-  <div class="nav-bar">
-    <p>
-      <a href="index.html"    class="clean-link active">Home &ensp;</a>
-      <a href="about.html"    class="clean-link">About &ensp;</a>
-      <a href="events.html"   class="clean-link">Events &ensp;</a>
-      <a href="sponsors.html" class="clean-link">Sponsors &ensp;</a>
-      <a href="calendar.html" class="clean-link">Calendar &ensp;</a>
-      <a href="join.html"     class="clean-link">Join&ensp;&ensp;</a>
-    </p>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-
-  <div id="main-filler"></div>
 
   <!-- ── Hero ── -->
-  <section id="hero">
-    <div id="main-text" class="fade-up">
-      <div class="hero-tag">Quantitative Finance &middot; Carnegie Mellon</div>
-      <h1 class="hero-title">Quant Club</h1>
-      <div class="hero-title-school">@ Carnegie Mellon</div>
-      <p class="hero-sub">
-        Connecting CMU students with the quantitative finance industry through
-        high-impact competitions, recruiting events, and industry partnerships.
-      </p>
-      <div class="hero-ctas">
-        <a href="events.html" class="btn btn-primary">Our Events</a>
-        <a href="join.html"   class="btn btn-secondary">Join the Club</a>
+  <section class="hero-scroll" aria-labelledby="hero-title">
+    <div id="hero">
+      <div class="hero-topline"><span><i></i> Quantitative Finance · Carnegie Mellon</span><span class="hero-edition">Pittsburgh, PA / 2026–27</span></div>
+      <div class="hero-layout">
+        <div id="main-text">
+          <div class="hero-identity">
+            <h1 class="hero-title" id="hero-title">Quant<span>Club<span class="title-period">.</span></span></h1>
+            <div class="hero-title-school">@ Carnegie Mellon</div>
+          </div>
+          <p class="hero-sub">Connecting CMU students with the quantitative finance industry through
+            high-impact competitions, recruiting events, and industry partnerships.</p>
+          <div class="hero-ctas">
+            <a href="join.html" class="btn btn-primary">Join the Club <svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+            <a href="events.html" class="btn btn-secondary">Our Events <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="film-visual" role="img" aria-label="A glowing dot blends into a fan of branching blue paths and a crimson trajectory, then fades completely into darkness. Decorative illustration, not market data.">
+          <video id="hero-film" muted playsinline preload="none" data-poster="images/hero-light-ball.jpg" data-src="media/quant-shot-3-glow-intro.mp4?v=1" aria-hidden="true"></video>
+        </div>
       </div>
+      <div class="hero-bottomline">
+        <a href="#club-overview" class="scroll-cue">Scroll to explore <span aria-hidden="true">↓</span></a>
+        <button class="film-toggle" type="button" aria-label="Play the animation" aria-pressed="false">Play film <span aria-hidden="true">↗</span></button>
+      </div>
+      <div class="hero-progress" aria-hidden="true"></div>
     </div>
   </section>
 
   <!-- ── Stats ── -->
-  <div class="stats-strip fade-up">
+  <div class="stats-strip" id="club-overview">
     <div class="stat-card">
-      <span class="stat-value" style="color:var(--accent-blue)">200+</span>
+      <span class="stat-value">200+</span>
       <span class="stat-label">Members</span>
     </div>
     <div class="stat-card">
-      <span class="stat-value" style="color:var(--accent-teal)">$10K+</span>
+      <span class="stat-value">$10K+</span>
       <span class="stat-label">in Prizes</span>
     </div>
     <div class="stat-card">
-      <span class="stat-value" style="color:var(--accent-purple)">10+</span>
+      <span class="stat-value">10+</span>
       <span class="stat-label">Industry Partners</span>
     </div>
     <div class="stat-card">
-      <span class="stat-value" style="color:var(--accent-gold)">400+</span>
+      <span class="stat-value">400+</span>
       <span class="stat-label">2026 Competitors</span>
     </div>
   </div>
@@ -73,7 +85,7 @@
     <div class="bento-grid">
 
       <a class="bento-card fade-up" href="about.html">
-        <span class="bento-label">Who We Are</span>
+        <h2 class="bento-title">Who We Are</h2>
         <p>
           The CMU Quant Club focuses on quantitative finance, the study of financial markets through
           advanced mathematical and computational techniques. We host events that help students
@@ -90,7 +102,7 @@
       </a>
 
       <a class="bento-card fade-up" href="join.html">
-        <span class="bento-label">Membership</span>
+        <h2 class="bento-title">Membership</h2>
         <p>
           Open to all CMU students. No application required. Subscribe to the mailing list and
           you&rsquo;re in. All events are free.
@@ -109,35 +121,36 @@
     Posted by the Hutt, modified by community. See post 'Timeline' for change history.
     Retrieved 2025-12-20, License — CC BY-SA 4.0
   -->
-  <section class="carousel fade-up">
-    <div class="carousel__wrapper">
+  <div class="carousel-controls" hidden><button class="carousel-toggle" type="button" aria-pressed="false" aria-controls="photo-carousel-1 photo-carousel-2">Pause photos</button></div>
+  <section class="carousel fade-up" id="photo-carousel-1" aria-label="Club event photos, row 1">
+    <div class="carousel__wrapper" tabindex="0" role="region" aria-label="Event photos — scroll horizontally for more">
       <div class="carousel__slide"><div class="carousel__image" style="background-image:url(images/webpformat/qc1.webp);"></div></div>
       <div class="carousel__slide"><div class="carousel__image" style="background-image:url(images/webpformat/qc2.webp);"></div></div>
       <div class="carousel__slide"><div class="carousel__image" style="background-image:url(images/webpformat/qc3.webp);"></div></div>
       <div class="carousel__slide"><div class="carousel__image" style="background-image:url(images/webpformat/qc4.webp);"></div></div>
       <div class="carousel__slide"><div class="carousel__image" style="background-image:url(images/webpformat/qc5.webp);"></div></div>
       <!-- repeat -->
-      <div class="carousel__slide"><div class="carousel__image" style="background-image:url(images/webpformat/qc1.webp);"></div></div>
-      <div class="carousel__slide"><div class="carousel__image" style="background-image:url(images/webpformat/qc2.webp);"></div></div>
-      <div class="carousel__slide"><div class="carousel__image" style="background-image:url(images/webpformat/qc3.webp);"></div></div>
-      <div class="carousel__slide"><div class="carousel__image" style="background-image:url(images/webpformat/qc4.webp);"></div></div>
-      <div class="carousel__slide"><div class="carousel__image" style="background-image:url(images/webpformat/qc5.webp);"></div></div>
+      <div class="carousel__slide" aria-hidden="true"><div class="carousel__image" style="background-image:url(images/webpformat/qc1.webp);"></div></div>
+      <div class="carousel__slide" aria-hidden="true"><div class="carousel__image" style="background-image:url(images/webpformat/qc2.webp);"></div></div>
+      <div class="carousel__slide" aria-hidden="true"><div class="carousel__image" style="background-image:url(images/webpformat/qc3.webp);"></div></div>
+      <div class="carousel__slide" aria-hidden="true"><div class="carousel__image" style="background-image:url(images/webpformat/qc4.webp);"></div></div>
+      <div class="carousel__slide" aria-hidden="true"><div class="carousel__image" style="background-image:url(images/webpformat/qc5.webp);"></div></div>
     </div>
   </section>
 
-  <section class="carousel fade-up">
-    <div class="carousel__wrapper">
+  <section class="carousel fade-up" id="photo-carousel-2" aria-label="Club event photos, row 2">
+    <div class="carousel__wrapper" tabindex="0" role="region" aria-label="Event photos — scroll horizontally for more">
       <div class="carousel__slide_2"><div class="carousel__image" style="background-image:url(images/qc2_1.jpg);"></div></div>
       <div class="carousel__slide_2"><div class="carousel__image" style="background-image:url(images/qc2_2.jpg);"></div></div>
       <div class="carousel__slide_2"><div class="carousel__image" style="background-image:url(images/qc2_3.jpg);"></div></div>
       <div class="carousel__slide_2"><div class="carousel__image" style="background-image:url(images/qc2_4.jpg);"></div></div>
       <div class="carousel__slide_2"><div class="carousel__image" style="background-image:url(images/qc2_5.jpg);"></div></div>
       <!-- repeat -->
-      <div class="carousel__slide_2"><div class="carousel__image" style="background-image:url(images/qc2_1.jpg);"></div></div>
-      <div class="carousel__slide_2"><div class="carousel__image" style="background-image:url(images/qc2_2.jpg);"></div></div>
-      <div class="carousel__slide_2"><div class="carousel__image" style="background-image:url(images/qc2_3.jpg);"></div></div>
-      <div class="carousel__slide_2"><div class="carousel__image" style="background-image:url(images/qc2_4.jpg);"></div></div>
-      <div class="carousel__slide_2"><div class="carousel__image" style="background-image:url(images/qc2_5.jpg);"></div></div>
+      <div class="carousel__slide_2" aria-hidden="true"><div class="carousel__image" style="background-image:url(images/qc2_1.jpg);"></div></div>
+      <div class="carousel__slide_2" aria-hidden="true"><div class="carousel__image" style="background-image:url(images/qc2_2.jpg);"></div></div>
+      <div class="carousel__slide_2" aria-hidden="true"><div class="carousel__image" style="background-image:url(images/qc2_3.jpg);"></div></div>
+      <div class="carousel__slide_2" aria-hidden="true"><div class="carousel__image" style="background-image:url(images/qc2_4.jpg);"></div></div>
+      <div class="carousel__slide_2" aria-hidden="true"><div class="carousel__image" style="background-image:url(images/qc2_5.jpg);"></div></div>
     </div>
   </section>
 
@@ -147,7 +160,7 @@
   <div class="event-preview-grid">
 
     <a class="event-preview-card fade-up" href="events.html">
-      <img class="event-preview-card__img" src="images/webpformat/market-making-game.webp" alt="Market Making Game">
+      <img loading="lazy" class="event-preview-card__img" src="images/webpformat/market-making-game.webp" alt="Market Making Game">
       <div class="event-preview-card__body">
         <span class="event-sponsor-tag">Previously sponsored by Jane Street</span>
         <h3>Market Making Game</h3>
@@ -160,7 +173,7 @@
     </a>
 
     <a class="event-preview-card fade-up" href="events.html">
-      <img class="event-preview-card__img" src="images/quantathon.jpg" alt="Quantathon">
+      <img loading="lazy" class="event-preview-card__img" src="images/quantathon.jpg" alt="Quantathon">
       <div class="event-preview-card__body">
         <span class="event-sponsor-tag">Previously sponsored by Goldman Sachs</span>
         <h3>Quantathon</h3>
@@ -181,43 +194,43 @@
     <div class="exec-grid fade-up">
 
       <a class="exec-card" href="https://www.linkedin.com/in/rishi-prabhu/" target="_blank" rel="noopener">
-        <img class="exec-card__photo" src="board_2026-27/riship.png" alt="Rishi Prabhu">
+        <img loading="lazy" class="exec-card__photo" src="board_2026-27/riship.png" alt="Rishi Prabhu">
         <div class="exec-card__name">Rishi Prabhu</div>
         <div class="exec-card__role">President</div>
       </a>
 
       <a class="exec-card" href="https://www.linkedin.com/in/arjun-niraj-patel/" target="_blank" rel="noopener">
-        <img class="exec-card__photo" src="board_2026-27/arjunp.jpg" alt="Arjun Patel">
+        <img loading="lazy" class="exec-card__photo" src="board_2026-27/arjunp.jpg" alt="Arjun Patel">
         <div class="exec-card__name">Arjun Patel</div>
         <div class="exec-card__role">VP Finance</div>
       </a>
 
       <a class="exec-card" href="https://www.linkedin.com/in/erikpernebo/" target="_blank" rel="noopener">
-        <img class="exec-card__photo" src="board_2026-27/erikp.jpg" alt="Erik Pernebo">
+        <img loading="lazy" class="exec-card__photo" src="board_2026-27/erikp.jpg" alt="Erik Pernebo">
         <div class="exec-card__name">Erik Pernebo</div>
         <div class="exec-card__role">VP Technology</div>
       </a>
 
       <a class="exec-card" href="https://www.linkedin.com/in/jacob-braginsky/" target="_blank" rel="noopener">
-        <img class="exec-card__photo" src="board_2026-27/jacobb.png" alt="Jacob Braginsky">
+        <img loading="lazy" class="exec-card__photo" src="board_2026-27/jacobb.png" alt="Jacob Braginsky">
         <div class="exec-card__name">Jacob Braginsky</div>
         <div class="exec-card__role">VP Public Relations</div>
       </a>
 
       <a class="exec-card" href="https://www.linkedin.com/in/joshua-q-wang/" target="_blank" rel="noopener">
-        <img class="exec-card__photo" src="board_2026-27/joshuaw.png" alt="Joshua Wang">
+        <img loading="lazy" class="exec-card__photo" src="board_2026-27/joshuaw.png" alt="Joshua Wang">
         <div class="exec-card__name">Joshua Wang</div>
         <div class="exec-card__role">VP Logistics</div>
       </a>
 
       <a class="exec-card" href="https://www.linkedin.com/in/kyle-dickinson-cmu/" target="_blank" rel="noopener">
-        <img class="exec-card__photo" src="board_2026-27/kyled.JPG" alt="Kyle Dickinson">
+        <img loading="lazy" class="exec-card__photo" src="board_2026-27/kyled.JPG" alt="Kyle Dickinson">
         <div class="exec-card__name">Kyle Dickinson</div>
         <div class="exec-card__role">VP Marketing</div>
       </a>
 
       <a class="exec-card" href="https://www.linkedin.com/in/michaelfryburg/" target="_blank" rel="noopener">
-        <img class="exec-card__photo" src="board_2026-27/michaelf.png" alt="Michael Fryburg">
+        <img loading="lazy" class="exec-card__photo" src="board_2026-27/michaelf.png" alt="Michael Fryburg">
         <div class="exec-card__name">Michael Fryburg</div>
         <div class="exec-card__role">Secretary</div>
       </a>
@@ -241,14 +254,15 @@
     </div>
   </div>
 
+  </main>
   <footer>
+    <div class="footer-brand"><a href="index.html">CMU Quant Club<span aria-hidden="true">↗</span></a><span>Mathematics. Markets. Community.</span><span class="footer-copyright">&copy; 2026 CMU Quant Club</span></div>
     <p>An Organization of the Department of Mathematical Sciences,<br>
     Mellon College of Science,
     <a href="https://www.cmu.edu/math/undergrad/index.html">Carnegie Mellon University</a></p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
-  <script src="waves.js"></script>
-  <script src="interactions.js"></script>
+  <script src="cinematic.js?v=mobile-no-media"></script>
+  <script src="interactions.js?v=photo-carousel"></script>
 </body>
 </html>

@@ -158,8 +158,23 @@
 
   function renderError() {
     listEl.innerHTML = '';
-    listEl.appendChild(el('div', 'cal-status',
-      'We couldn’t load the calendar right now. Please try again later.'));
+    const box = el('div', 'cal-status');
+    box.appendChild(el('p', null, 'We couldn’t load the calendar right now. Please try again later.'));
+    const actions = el('div', 'cal-status__actions');
+    const retry = el('button', 'btn btn-secondary', 'Try again');
+    retry.type = 'button';
+    retry.addEventListener('click', function () {
+      retry.disabled = true;
+      retry.textContent = 'Retrying…';
+      fetchEvents();
+    });
+    const join = el('a', 'btn btn-primary', 'Join the mailing list');
+    join.href = 'https://lists.andrew.cmu.edu/mailman/listinfo/cmu-quant';
+    join.target = '_blank';
+    join.rel = 'noopener';
+    actions.append(retry, join);
+    box.appendChild(actions);
+    listEl.appendChild(box);
   }
 
   // ── Parsing ─────────────────────────────────────────────────────────────

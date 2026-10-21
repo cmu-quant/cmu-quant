@@ -4,34 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Join — CMU Quant Club</title>
-  <link rel="stylesheet" href="home_styles.css">
+  <link rel="stylesheet" href="home_styles.css?v=svg-arrows">
   <link rel="icon" type="image/png" href="quantclubicofordarkmode.ico">
 </head>
-<body>
+<body class="page-join">
 
-  <div id="logo">
-    <a href="index.html">
-      <img src="QuantClubLogoForDarkMode.png" alt="CMU Quant Club" style="width:50px;height:auto;">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="CMU Quant Club home">
+      <img src="QuantClubLogoForDarkMode.png" width="44" height="44" alt="">
+      <span>CMU <strong>Quant Club</strong><small>Carnegie Mellon University</small></span>
     </a>
-  </div>
+    <nav class="nav-bar" aria-label="Main navigation">
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="join.html" class="active" aria-current="page">Join the Club <svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
 
-  <div class="nav-bar">
-    <p>
-      <a href="index.html"    class="clean-link">Home &ensp;</a>
-      <a href="about.html"    class="clean-link">About &ensp;</a>
-      <a href="events.html"   class="clean-link">Events &ensp;</a>
-      <a href="sponsors.html" class="clean-link">Sponsors &ensp;</a>
-      <a href="calendar.html" class="clean-link">Calendar &ensp;</a>
-      <a href="join.html"     class="clean-link active">Join&ensp;&ensp;</a>
-    </p>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
 
-  <div id="main-filler"></div>
-
-  <h1 class="page-header fade-up">Join Us</h1>
+  <div class="flagship-section-header"><span class="section-sublabel">Open to All CMU Students</span><h1 class="page-header">Join Us</h1></div>
   <div class="page-header-rule"></div>
 
   <div class="join-note fade-up">
@@ -45,9 +44,10 @@
     </p>
   </div>
 
+  <div class="join-grid">
   <!-- ── Mailing List ── -->
   <a class="join-section fade-up" href="https://lists.andrew.cmu.edu/mailman/listinfo/cmu-quant" target="_blank" rel="noopener">
-    <h2>Mailing List</h2>
+    <span class="join-kicker">Start here / 01</span><h2>Mailing List</h2>
     <p>
       Our primary channel for announcements, event invitations, and updates.
       All members must be subscribed — this is how we communicate.
@@ -57,7 +57,7 @@
 
   <!-- ── Slack ── -->
   <a class="join-section fade-up" href="https://forms.gle/8cQ7aaPhVeyXnqZU9" target="_blank" rel="noopener">
-    <h2>Slack Community</h2>
+    <span class="join-kicker">02</span><h2>Slack Community</h2>
     <p>
       Our Slack is a more close-knit space for members who want deeper involvement with the club.
       Access is by application.
@@ -67,7 +67,7 @@
 
   <!-- ── LinkedIn ── -->
   <a class="join-section fade-up" href="https://www.linkedin.com/company/cmuquant/" target="_blank" rel="noopener">
-    <h2>LinkedIn</h2>
+    <span class="join-kicker">03</span><h2>LinkedIn</h2>
     <p>
       Follow us on LinkedIn for industry news and club highlights.
     </p>
@@ -76,14 +76,17 @@
 
   <!-- ── Instagram ── -->
   <a class="join-section fade-up" href="https://www.instagram.com/cmuquant/" target="_blank" rel="noopener">
-    <h2>Instagram</h2>
+    <span class="join-kicker">04</span><h2>Instagram</h2>
     <p>
       Follow us on Instagram for event photos and club updates.
     </p>
     <span class="btn btn-secondary">Follow</span>
   </a>
 
+  </div>
+  </main>
   <footer>
+    <div class="footer-brand"><a href="index.html">CMU Quant Club<span aria-hidden="true">↗</span></a><span>Mathematics. Markets. Community.</span><span class="footer-copyright">&copy; 2026 CMU Quant Club</span></div>
     <p>An Organization of the Department of Mathematical Sciences,<br>
     Mellon College of Science,
     <a href="https://www.cmu.edu/math/undergrad/index.html">Carnegie Mellon University</a></p>

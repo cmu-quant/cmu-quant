@@ -1,67 +1,66 @@
-// Scroll-triggered fade-up — disabled on mobile to prevent scroll interference
-const isMobile = window.matchMedia('(max-width: 768px)').matches;
-
-if (isMobile) {
-  document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
-} else {
-  const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+/* Shared navigation and restrained, progressively enhanced reveals. */
+(() => {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const carousels = document.querySelectorAll('.carousel');
+  const carouselControls = document.querySelector('.carousel-controls');
+  const carouselToggle = document.querySelector('.carousel-toggle');
+  if (carousels.length && carouselControls && carouselToggle) {
+    let photosPaused = false;
+    const updatePhotos = () => {
+      carouselControls.hidden = reducedMotion.matches;
+      carousels.forEach(carousel => {
+        carousel.classList.toggle('is-animated', !reducedMotion.matches);
+        carousel.classList.toggle('is-paused', photosPaused);
+        carousel.querySelector('.carousel__wrapper').setAttribute('aria-label', reducedMotion.matches
+          ? 'Event photos — scroll horizontally for more'
+          : 'Automatically scrolling event photos — focus or hover to pause');
+      });
+      carouselToggle.setAttribute('aria-pressed', String(photosPaused));
+      carouselToggle.textContent = photosPaused ? 'Resume photos' : 'Pause photos';
+    };
+    carouselToggle.addEventListener('click', () => { photosPaused = !photosPaused; updatePhotos(); });
+    reducedMotion.addEventListener('change', updatePhotos);
+    updatePhotos();
+  }
+  if ('IntersectionObserver' in window && !reducedMotion.matches) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('is-pending');
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: .05});
+    document.querySelectorAll('.fade-up').forEach(el => {
+      // Keep initial content visible, even if observation is delayed.
+      if (el.getBoundingClientRect().top > innerHeight) el.classList.add('is-pending');
+      observer.observe(el);
     });
-  }, { threshold: 0.08, rootMargin: '-30px' });
-
-  document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
-}
-
-// Nav shadow on scroll
-window.addEventListener('scroll', () => {
-  const nav = document.querySelector('.nav-bar');
-  if (nav) nav.classList.toggle('scrolled', window.scrollY > 20);
-}, { passive: true });
-
-// Mobile nav dropdown toggle
-document.querySelectorAll('.nav-toggle').forEach(btn => {
-  const bar = btn.closest('.nav-bar');
-  if (!bar) return;
-  btn.addEventListener('click', () => {
-    const open = bar.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  // Close the menu when tapping outside it
-  document.addEventListener('click', e => {
-    if (bar.classList.contains('open') && !bar.contains(e.target)) {
-      bar.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  });
-});
-
-// 3D tilt on hover — skip on mobile
-if (!isMobile) {
-  const TILT_SELECTORS = [
-    '.bento-card',
-    '.exec-card',
-    '.event-preview-card',
-    '.event-highlight-card',
-    '.pillar-card',
-    '.join-section',
-  ].join(', ');
-
-  document.querySelectorAll(TILT_SELECTORS).forEach(el => {
-    el.addEventListener('mousemove', e => {
-      const r = el.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width  - 0.5;
-      const y = (e.clientY - r.top)  / r.height - 0.5;
-      el.style.transition = 'transform 0.08s ease, box-shadow 0.08s ease';
-      el.style.transform = `perspective(700px) rotateX(${-y * 7}deg) rotateY(${x * 7}deg) translateY(-5px)`;
+    reducedMotion.addEventListener('change', event => {
+      if (event.matches) document.querySelectorAll('.is-pending').forEach(el => el.classList.remove('is-pending'));
     });
-
-    el.addEventListener('mouseleave', () => {
-      el.style.transition = 'transform 0.45s ease, box-shadow 0.45s ease, background 0.25s ease, border-color 0.25s ease';
-      el.style.transform = '';
-      setTimeout(() => { el.style.transition = ''; }, 460);
+  }
+  document.querySelectorAll('.nav-toggle').forEach(button => {
+    const nav = button.closest('.nav-bar');
+    nav.classList.add('is-enhanced');
+    const links = nav.querySelector('.nav-links');
+    const close = () => {
+      nav.classList.remove('open');
+      button.setAttribute('aria-expanded', 'false');
+      button.setAttribute('aria-label', 'Open menu');
+    };
+    button.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      button.setAttribute('aria-expanded', String(open));
+      button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     });
+    links.addEventListener('click', e => { if (e.target.closest('a')) close(); });
+    document.addEventListener('click', e => { if (!nav.contains(e.target)) close(); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && nav.classList.contains('open')) { close(); button.focus(); }
+    });
+    nav.addEventListener('focusout', e => { if (!nav.contains(e.relatedTarget)) close(); });
+    window.matchMedia('(min-width: 801px)').addEventListener('change', close);
   });
-}
+})();

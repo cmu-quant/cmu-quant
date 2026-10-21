@@ -4,43 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calendar — CMU Quant Club</title>
-  <link rel="stylesheet" href="home_styles.css">
+  <link rel="stylesheet" href="home_styles.css?v=svg-arrows">
   <link rel="icon" type="image/png" href="quantclubicofordarkmode.ico">
 </head>
-<body>
+<body class="page-calendar">
 
-  <div id="logo">
-    <a href="index.html">
-      <img src="QuantClubLogoForDarkMode.png" alt="CMU Quant Club" style="width:50px;height:auto;">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="CMU Quant Club home">
+      <img src="QuantClubLogoForDarkMode.png" width="44" height="44" alt="">
+      <span>CMU <strong>Quant Club</strong><small>Carnegie Mellon University</small></span>
     </a>
-  </div>
+    <nav class="nav-bar" aria-label="Main navigation">
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="calendar.html" class="active" aria-current="page">Calendar</a>
+        <a href="join.html" class="nav-join">Join the Club <svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
 
-  <div class="nav-bar">
-    <p>
-      <a href="index.html"    class="clean-link">Home &ensp;</a>
-      <a href="about.html"    class="clean-link">About &ensp;</a>
-      <a href="events.html"   class="clean-link">Events &ensp;</a>
-      <a href="sponsors.html" class="clean-link">Sponsors &ensp;</a>
-      <a href="calendar.html" class="clean-link active">Calendar &ensp;</a>
-      <a href="join.html"     class="clean-link">Join&ensp;&ensp;</a>
-    </p>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-
-  <div id="main-filler"></div>
 
   <!-- ── Header ── -->
   <div class="flagship-section-header fade-up">
     <span class="section-sublabel">What&rsquo;s Coming Up</span>
-    <div class="flagship-big-title">Calendar</div>
+    <h1 class="flagship-big-title">Calendar</h1>
   </div>
   <div class="page-header-rule"></div>
 
   <!-- ── Upcoming events (populated by calendar.js) ── -->
   <div class="calendar-wrap">
-    <div id="cal-list">
+    <div id="cal-list" aria-live="polite">
       <div class="cal-status">
         <div class="cal-spinner"></div>
         Loading events&hellip;
@@ -48,7 +47,9 @@
     </div>
   </div>
 
+  </main>
   <footer>
+    <div class="footer-brand"><a href="index.html">CMU Quant Club<span aria-hidden="true">↗</span></a><span>Mathematics. Markets. Community.</span><span class="footer-copyright">&copy; 2026 CMU Quant Club</span></div>
     <p>An Organization of the Department of Mathematical Sciences,<br>
     Mellon College of Science,
     <a href="https://www.cmu.edu/math/undergrad/index.html">Carnegie Mellon University</a></p>
