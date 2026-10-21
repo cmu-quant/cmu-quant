@@ -16,6 +16,19 @@
 .film-toggle:hover { color: var(--text-primary); }
 .film-toggle:disabled { cursor: default; opacity: .6; }
 .hero-cinematic .hero-bottomline { padding-top: 10px; }
+@media (min-width: 801px) {
+  .hero-cinematic .hero-scroll { margin-inline: clamp(20px, 1.4vw, 48px); }
+  .hero-cinematic #hero { min-height: calc(100svh - 112px); display: flex; flex-direction: column; }
+  .hero-cinematic .hero-layout { flex: 1; display: flex; align-items: center; }
+}
+@media (min-width: 1440px) {
+  .hero-cinematic #hero { padding-inline: var(--gutter); }
+  .hero-cinematic .hero-title { font-size: clamp(134px, 9.3vw, 280px); }
+  .hero-cinematic .hero-title-school { font-size: clamp(26px, 1.8vw, 42px); }
+  .hero-cinematic .hero-sub { font-size: clamp(14px, .85vw, 19px); max-width: 42ch; }
+  .hero-cinematic .hero-ctas .btn { font-size: clamp(12px, .75vw, 16px); min-height: 52px; }
+  .hero-cinematic .hero-topline, .hero-cinematic .hero-bottomline { font-size: clamp(10px, .65vw, 14px); }
+}
 @media (max-width: 800px) {
   .film-toggle, .hero-cinematic .hero-progress { display: none; }
   .hero-identity { margin-inline: auto; transform: none; will-change: auto; }

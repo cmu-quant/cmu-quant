@@ -16,9 +16,9 @@
   --accent-teal: #5BA8A0;
   --accent-purple: #9B8FD0;
   --font-display: 'Space Grotesk', sans-serif;
-  --gutter: clamp(20px, 4vw, 64px);
+  --gutter: clamp(20px, 4vw, 128px);
   --radius: 24px;
-  --content: 1440px;
+  --content: 100%;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 110px; }
@@ -641,6 +641,13 @@ footer p a { color: var(--text-primary); text-decoration-color: var(--border); t
 }
 
 /* Shared component refinements */
+/* Fill wide displays while keeping paragraph lines comfortable to read. */
+@media (min-width: 1440px) {
+  .bento-card p, .event-block-meta p, .event-preview-card p,
+  .about-intro-section p, .treks-section > p, blockquote { max-width: 70ch; }
+  .site-header .brand > span { font-size: clamp(17px, 1.1vw, 23px); }
+  .nav-links a { font-size: clamp(12px, .8vw, 16px); }
+}
 .calendar-wrap { margin: 0 var(--gutter); max-width: none; min-height: 240px; }
 .cal-event { border-radius: 20px; border-left: 1px solid var(--border); padding: 28px; box-shadow: none; }
 .cal-event:hover { transform: none; box-shadow: none; border-color: rgba(122,149,184,.4); }
