@@ -1,0 +1,14 @@
+{
+  "file": "quant-shot-3-glow-intro-4k.mp4",
+  "source": "quant-shot-3-glow-intro.mp4",
+  "processing": "AI upscale through Higgsfield: Bytedance Video Upscale Pro, aigc preset, 4k, 24 fps.",
+  "generation_id": "fdfe34cc-53b2-4b98-8919-0f1787365e73",
+  "web_media_id": "9b605af8-afd2-4251-ad52-dfbd1d9930c9",
+  "duration_seconds": 4,
+  "frames_per_second": 24,
+  "frame_count": 96,
+  "resolution": [3840, 2160],
+  "size_bytes": 7516326,
+  "encoding": "H.264, yuv420p, CRF 17, keyframe interval 6, no B frames, faststart, no audio",
+  "content": "Same glowing-dot opening, original shot 3, and fade to black. Original 1080p file retained."
+}
