@@ -64,7 +64,6 @@ main > p, .treks-section > p { margin-inline: var(--gutter); }
 .hero-layout { display: grid; grid-template-columns: 1fr 1fr; align-items: center; min-height: min(58vh,620px); gap: 20px; padding-block: clamp(22px,3vh,40px); }
 .hero-title { font-size: clamp(78px,9.3vw,146px); font-weight: 500; letter-spacing: -.07em; line-height: .85; }
 .hero-title > span { display: block; color: var(--accent-blue); }
-.title-period { color: var(--text-primary); }
 .hero-title-school { font-family: var(--font-display); font-size: clamp(17px,2vw,26px); margin-top: 22px; letter-spacing: -.03em; }
 .hero-sub { font-size: 13px; line-height: 1.8; max-width: 380px; margin: 20px 0 0; }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
@@ -95,6 +94,18 @@ main > p, .treks-section > p { margin-inline: var(--gutter); }
 .stat-card + .stat-card { border-left: 1px solid var(--border); }
 .stat-value { font-family: var(--font-display); font-size: clamp(32px,4vw,56px); line-height: 1; letter-spacing: -.05em; }
 .stat-label { color: var(--text-muted); font-size: 11px; }
+.stat-card:nth-child(1) .stat-value { color: var(--accent-blue); }
+.stat-card:nth-child(2) .stat-value { color: var(--accent-teal); }
+.stat-card:nth-child(3) .stat-value { color: var(--accent-purple); }
+.stat-card:nth-child(4) .stat-value { color: var(--accent-gold); }
+.stat-value, .stat-label { transition: transform .25s ease, text-shadow .25s ease; transform-origin: left center; }
+@media (hover: hover) and (pointer: fine) {
+  .stat-card:hover .stat-value { text-shadow: 0 0 28px color-mix(in srgb, currentColor 45%, transparent); }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .stat-card:hover .stat-value { transform: translateY(-5px) scale(1.04); }
+  .stat-card:hover .stat-label { transform: translateY(-5px); }
+}
 .bento-section { padding: 80px var(--gutter) 56px; }
 .bento-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 20px; }
 .bento-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: clamp(24px,3vw,44px); color: inherit; text-decoration: none; transition: border-color .2s; }
