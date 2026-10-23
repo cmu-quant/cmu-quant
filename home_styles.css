@@ -216,7 +216,7 @@ blockquote .attribution { color: var(--accent-blue); }
 .tier-partners .tier-label { color: var(--text-muted); font-size: 23px; }
 .platinum-grid,.gold-grid,.silver-grid,.partners-grid { display: grid; gap: 16px; }
 .platinum-grid { grid-template-columns: repeat(3,1fr); }
-.silver-grid { grid-template-columns: repeat(5,minmax(0,1fr)); }
+.silver-grid { grid-template-columns: repeat(6,minmax(0,1fr)); }
 .gold-grid { grid-template-columns: repeat(3,1fr); }.partners-grid { grid-template-columns: minmax(0,260px); }
 .sponsor-card { display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 20px; height: 190px; padding: 30px; transition: box-shadow .2s; }
 .sponsor-card:hover { box-shadow: 0 0 0 3px var(--accent-blue); }
